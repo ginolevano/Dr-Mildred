@@ -32,5 +32,11 @@
     }
 }
 
+@mixin smallTablet($medida : 768px){
+    @media screen and (max-width:$medida) {
+        @content
+    }
+}
+
 
 
