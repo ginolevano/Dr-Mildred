@@ -15,6 +15,8 @@ $(()=>{
         console.log('todo bien')
         
         $('.menumobile').toggleClass('active')
+        $('.menumobile__li').toggleClass('active')
+        $('.menumobile__rrssli').toggleClass('active')
     })
 
     let nextSlide = ((e)=>{
