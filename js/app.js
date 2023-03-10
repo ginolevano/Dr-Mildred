@@ -13,7 +13,8 @@ $(()=>{
 
         $('.menumovil__lines').toggleClass('active')
         console.log('todo bien')
-    
+        
+        $('.menumobile').toggleClass('active')
     })
 
     let nextSlide = ((e)=>{
