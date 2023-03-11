@@ -536,6 +536,7 @@ body {
   padding: 2em 0em 8em 0em;
   font-size: clamp(.3rem ,20vw,1.4rem);
   line-height: 1.3;
+  color: var(--color-text);
 }
 @media screen and (max-width: 550px) {
   .main .main__cont .main__titles .main__p {
@@ -612,7 +613,7 @@ body {
 }
 .main .card .card__box {
   width: 100%;
-  min-height: 34em;
+  min-height: 40em;
 }
 .main .card .card__img {
   width: 100%;
@@ -667,6 +668,165 @@ body {
   text-align: center;
   font-family: "aileron-thin";
   color: var(--color-text);
+}
+
+.endodoncia {
+  width: 100%;
+  padding: 8em 0em 8em 0em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.endodoncia .endodoncia__cont {
+  width: 80%;
+}
+.endodoncia .endodoncia__width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.endodoncia .endodoncia__h2 {
+  text-align: center;
+  font-family: "montserrat";
+  font-weight: 900;
+  font-size: clamp(.3rem ,20vw,1.8rem);
+  line-height: 1.3;
+}
+.endodoncia .line__endodoncia {
+  width: 10%;
+  position: relative;
+}
+.endodoncia .line__endodoncia::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--color-secundario-vague);
+  position: absolute;
+  top: 1em;
+  right: 0px;
+}
+.endodoncia .endodoncia__p {
+  width: 70%;
+  text-align: center;
+  font-family: "aileron-thin";
+  font-size: clamp(.3rem ,20vw,1.4rem);
+  line-height: 1.3;
+  color: var(--color-text);
+  padding: 2em 0em 0em 0em;
+}
+
+.tabs {
+  width: 100%;
+  background: greenyellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tabs__cont {
+  width: 90%;
+  background: red;
+}
+
+.tabs__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tabs__li {
+  background: hotpink;
+  padding: 1em;
+  cursor: pointer;
+}
+.tabs__li:not(:last-child) {
+  margin-right: 1em;
+}
+
+.tabs__infoul {
+  width: 100%;
+  min-height: 20vh;
+  position: relative;
+  background: blue;
+}
+
+.tabs__infoli {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tabs__infocont {
+  width: 100%;
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tabs__infocont.active {
+  opacity: 1;
+}
+
+.tabs__infop {
+  background: purple;
+}
+
+.tabs__infoimg {
+  background: peru;
 }
 
 .footer {

@@ -8,7 +8,7 @@ let currentSlide = 0;
 
 
 
-$(()=>{
+$(document).ready(()=>{
     $('.menumovil__box').on('click',()=>{
 
         $('.menumovil__lines').toggleClass('active')
@@ -55,6 +55,15 @@ $(()=>{
 
     })
 
+
+    // START TABS
+
+    $('.tabs__li').each(function (i) {
+        $(this).on('click', ()=> {
+            $('.tabs__infocont').removeClass('active');
+            $('.tabs__infocont').eq(i).addClass('active');
+        });
+    });
+
+    // END TABS
 })
-
-
