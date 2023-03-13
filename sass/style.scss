@@ -267,13 +267,13 @@
 .main{
     width: 100%;
     background-color: var(--color-secundario);
-    padding: 8em 0em 20em 0em;
-
+    // @include mixin.mobile(550px){padding:10em 0em 20em 0em;}
 
     .main__cont{
         width: 100%;
         display: flex;
         justify-content: center;
+        padding: 8em 0em 8em 0em;
 
         .main__titles{
             width: 80%;
@@ -287,8 +287,7 @@
                 font-family: 'montserrat';
                 font-weight: 900;
                 font-size: clamp(.3rem ,20vw,1.8rem);
-                
-                @include mixin.mobile(550px){padding: 4em 0em 1em 0em;}
+                @include mixin.mobile(550px);                
                 line-height: 1.3;
 
             }
@@ -314,15 +313,14 @@
                 width: 70%;        
                 text-align: center;
                 font-family: 'aileron-thin';
-                padding: 2em 0em 8em 0em;
                 font-size: clamp(.3rem ,20vw,1.4rem);
                 line-height: 1.3;
                 color: var(--color-text);
-                @include mixin.mobile(550px){width: 100%;}
+                padding: 2em 0em 0em 0em;
+                @include mixin.mobile(550px){width: 100%; padding: 2em 0em 8em 0em;}
             }
         }
     }
-
     
     
     .card{
@@ -469,6 +467,7 @@
         line-height: 1.3;
         color: var(--color-text);
         padding: 2em 0em 0em 0em;
+        @include mixin.mobile(550px){width:100%;}
     }
     
     
@@ -476,12 +475,13 @@
 
 .tabs{
     width: 100%;
-    background: greenyellow;
+    
     @include mixin.flex(row,nowrap,center,center);
 }
 .tabs__cont{
     width: 90%;
     background: red;
+    @include mixin.smallTablet(768px){display: none;}
 }
 .tabs__width{
 
@@ -526,6 +526,70 @@
 .tabs__infoimg{
     background: peru;
 }
+
+.tabstwo__cont{
+    display: none;
+    @include mixin.smallTablet(768px){display: block;}
+}
+.tabstwo__width{
+    padding: 0em 0em 10em 0em;
+}
+.tabstwo__ul{
+    
+}
+.tabstwo__li{
+
+}
+.tabstwo__titlecont{
+    width: 100%;
+    cursor: pointer;
+    @include mixin.flex(row,nowrap,space-between,center);
+    background:  green;
+    padding: 2em;
+
+    &:not(:last-child){
+        margin-bottom: .4em;
+    }
+
+}
+
+.tabstwo__title{
+    
+}
+
+.tabstwo__img{
+    width: 4%;
+    background-color: red;
+.tabstwo__arrow{
+    transform: rotate(90deg);
+}
+}
+.tabstwo__info{
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+    
+    &.active{
+        height: 18em;
+    }
+}
+.tabstwo__infoli{
+
+}
+.tabstwo__infocont{
+    
+}
+.tabstwo__infop{
+    
+}
+.tabstwo__infoimg{
+    
+}
+
+
+
+
+
 
 
 .footer{

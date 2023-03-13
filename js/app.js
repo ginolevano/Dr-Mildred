@@ -19,6 +19,10 @@ $(document).ready(()=>{
         $('.menumobile__rrssli').toggleClass('active')
     })
 
+
+
+
+    //SLIDER START//
     let nextSlide = ((e)=>{
 
         img.eq(currentSlide).removeClass("active");
@@ -52,8 +56,9 @@ $(document).ready(()=>{
         img.removeClass('active');
         img.eq(foto).addClass('active')
         console.log('clickk')
-
     })
+
+//SLIDER START//
 
 
     // START TABS
@@ -64,6 +69,23 @@ $(document).ready(()=>{
             $('.tabs__infocont').eq(i).addClass('active');
         });
     });
+    
+    $('.tabstwo__titlecont').each(function (e){
+        $(this).on('click',()=>{
+            const $tabsinfo = $('.tabstwo__info').eq(e)
+            if($tabsinfo.hasClass('active')){
+                $tabsinfo.removeClass('active')
+
+            }else(
+                $('.tabstwo__info').removeClass('active'),
+                $tabsinfo.addClass('active')
+            )
+
+            console.log('estoy haciendo click a cada uno')
+
+        })
+    })
+    
 
     // END TABS
 })
