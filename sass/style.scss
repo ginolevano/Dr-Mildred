@@ -52,7 +52,7 @@
 
     .header__menu{
         @include mixin.flex(row,nowrap,center,center);
-        @include mixin.mobile (550px){display: none;}
+        @include mixin.mobile (768px){display: none;}
         text-transform: uppercase;
     }
 
@@ -82,7 +82,7 @@
 
     .menumovil__box{
         display: none;
-        @include mixin.mobile(550px){display:block;};
+        @include mixin.mobile(768px){display:block;};
         position: relative;
         z-index: 3;
         right: 1.2em;
@@ -143,7 +143,7 @@
         top: 0;
         left: 0;
         display: none;
-        @include mixin.mobile(550px){display: block;}
+        @include mixin.mobile(768px){display: block;}
         transform: translateX(100%);
         transition: transform .3s ease-in-out;
 
@@ -317,7 +317,7 @@
                 line-height: 1.3;
                 color: var(--color-text);
                 padding: 2em 0em 0em 0em;
-                @include mixin.mobile(550px){width: 100%; padding: 2em 0em 8em 0em;}
+                @include mixin.mobile(768px){width: 100%; padding: 2em 0em 0em 0em;}
             }
         }
     }
@@ -468,6 +468,7 @@
         color: var(--color-text);
         padding: 2em 0em 0em 0em;
         @include mixin.mobile(550px){width:100%;}
+        @include mixin.smallTablet(768px){width: 100%;}
     }
     
     
@@ -614,13 +615,14 @@
     @include mixin.flex(column,nowrap,center,center);
     position: relative;
     @include mixin.mobile(550px){width:100%;}
-
+    @include mixin.smallTablet(768px){width: 80%;}
     
     
     
     .footer__img{
         width: 40%;
         @include mixin.mobile(550px){width:50%}
+
         padding: 0em 0em 0em 0em;
     }
 
@@ -640,12 +642,15 @@
             z-index: 1;
         }
     }
-    .footer__p{
-        font-family: 'montserrat';
-        padding: 1.5em 0em 0em 0em;
-        color: var(--color-secundario-white);
-        text-align: center;
-    }
+
+
+}
+
+.footer__p{
+    font-family: 'montserrat';
+    padding: 1.5em 0em 0em 0em;
+    color: var(--color-secundario-white);
+    text-align: center;
 
 }
 
