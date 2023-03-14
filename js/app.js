@@ -66,19 +66,26 @@ $(document).ready(()=>{
     $('.tabs__li').each(function (i) {
         $(this).on('click', ()=> {
             $('.tabs__infocont').removeClass('active');
+            $('.tabs__li').removeClass('active');
             $('.tabs__infocont').eq(i).addClass('active');
+            $('.tabs__li').eq(i).addClass('active')
         });
     });
     
     $('.tabstwo__titlecont').each(function (e){
         $(this).on('click',()=>{
             const $tabsinfo = $('.tabstwo__info').eq(e)
-            if($tabsinfo.hasClass('active')){
+            const $arrow = $('.tabstwo__img').eq(e)
+            if($tabsinfo.hasClass('active'),
+                $arrow.hasClass('active')){
                 $tabsinfo.removeClass('active')
-
+                $arrow.removeClass('active')
             }else(
                 $('.tabstwo__info').removeClass('active'),
-                $tabsinfo.addClass('active')
+                $tabsinfo.addClass('active'),
+                $('.tabstwo__img').removeClass('active'),
+                $arrow.addClass('active')
+
             )
 
             console.log('estoy haciendo click a cada uno')
