@@ -23,41 +23,37 @@ $(document).ready(()=>{
 
 
     //SLIDER START//
-    let nextSlide = ((e)=>{
+    
+    
+    // let speed = 4000
+    // let nextImgs = ((e)=>{
+    //     $('.slider__imgscont').eq(currentSlide).removeClass('active')
 
-        img.eq(currentSlide).removeClass("active");
-       // Move to the next slide
-        currentSlide = (currentSlide + 1) % img.length;
+    //     currentSlide = (currentSlide + 1) % $('.slider__imgscont').length;
+    //     $('.slider__imgscont').eq(currentSlide).addClass('active')
+    // })
+    // setInterval(nextImgs,speed);
 
-        img.eq(currentSlide).addClass("active");
-    })
-        // Call the nextSlide function every "delay" milliseconds
-
-    setInterval(nextSlide, speed);
-
-    $('.slider__right').on('click',(e)=>{
-        
+    $('.right').on('click',(e)=>{
+        console.log('ohh rightttt')
         foto++
-        if( foto === img.length){ 
+        if(foto === $('.slider__imgscont').length){
             foto = 0;
         }
-        img.removeClass('active');
-        img.eq(foto).addClass('active')
-        console.log('clickk')
-
+        $('.slider__imgscont').removeClass('active')
+        $('.slider__imgscont').eq(foto).addClass('active')
     })
-    $('.slider__left').on('click',(e)=>{
-        
-        
-        if( foto === 0){ 
-            foto = img.length;
+
+    $('.left').on('click',(e)=>{
+        if(foto === 0){
+            foto = $('.slider__imgscont').length 
         }
-        foto--
-        img.removeClass('active');
-        img.eq(foto).addClass('active')
-        console.log('clickk')
-    })
 
+        foto--
+
+        $('.slider__imgscont').removeClass('active')
+        $('.slider__imgscont').eq(foto).addClass('active')
+    })
 //SLIDER START//
 
 
@@ -78,7 +74,8 @@ $(document).ready(()=>{
             const $arrow = $('.tabstwo__img').eq(e)
             if($tabsinfo.hasClass('active'),
                 $arrow.hasClass('active')){
-                $tabsinfo.removeClass('active')
+                $tabsinfo.removeClass('active'),
+                
                 $arrow.removeClass('active')
             }else(
                 $('.tabstwo__info').removeClass('active'),

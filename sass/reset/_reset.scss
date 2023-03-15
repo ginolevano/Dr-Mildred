@@ -11,12 +11,19 @@
     font-weight: 400;
 
 }
+@font-face{
+    font-family: 'openSans';
+    src: url(../OpenSans/OpenSans_Condensed-ExtraBold.ttf) format('truetype');
+    font-display: swap;
+}
 
 :root{
     // --color-primario   : #131313;
     // --color-secundario : #eae9e8;
     --tipo-principal   : 'montserrat';
     --tipo-secundaria  : 'aileron';
+    --color-secundario-brown  : #332520;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,7 +87,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 ::selection {
-    background-color: var(--color-primario);
+    background-color: var(--color-secundario-vague);
     color: var(--color-secundario);
 }
 
