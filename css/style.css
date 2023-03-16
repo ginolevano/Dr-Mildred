@@ -1029,6 +1029,12 @@ body {
 @media screen and (max-width: 768px) {
   .email__h4 {
     font-size: clamp(.3rem ,20vw,1.4rem);
+    text-transform: uppercase;
+  }
+}
+@media screen and (max-width: 480px) {
+  .email__h4 {
+    margin-bottom: 1em;
   }
 }
 
@@ -1043,12 +1049,14 @@ body {
     font-size: clamp(.3rem ,20vw,.9rem);
   }
 }
-
-.email__cont {
-  position: relative;
+@media screen and (max-width: 480px) {
+  .email__p {
+    font-size: clamp(.3rem ,20vw,.8rem);
+  }
 }
 
-.email__width {
+.email__cont {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1064,23 +1072,43 @@ body {
           align-items: center;
 }
 
+.email__width {
+  width: 40%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .email__width {
+    width: 90%;
+  }
+}
+
 .submit__emailinput {
-  width: 30%;
-  outline: 1px solid var(--color-secundario-vague);
+  width: 100%;
+  outline: 0px solid var(--color-secundario-vague);
   border-radius: 8px 0px 0px 8px;
-  -webkit-border-radius: 8px 0px 0px 8px;
+  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-vague);
+          box-shadow: 0 0 0 2px var(--color-secundario-vague);
   padding: 1em 0em 1em 1em;
   font-family: "aileron-thin";
   color: var(--color-secundario-black);
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .submit__emailinput {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .submit__emailinput {
-    width: 60%;
+    width: 90%;
   }
 }
 .submit__emailinput:focus::-webkit-input-placeholder {
@@ -1110,11 +1138,26 @@ body {
 }
 
 .submit__btn {
-  padding: 1em 1em 1em 1em;
-  background-color: var(--color-secundario-vague);
-  outline: 1px solid var(--color-secundario-vague);
+  position: absolute;
+  right: -1em;
+  padding: 1.2em 3em 1.2em 3em;
+  background: var(--color-secundario-brown);
+  outline: 0px solid var(--color-secundario-brown);
   cursor: pointer;
   border-radius: 0px 8px 8px 0px;
+  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-brown);
+          box-shadow: 0 0 0 2px var(--color-secundario-brown);
+}
+@media screen and (max-width: 768px) {
+  .submit__btn {
+    right: 0px;
+  }
+}
+
+.submit__btnimg {
+  width: 50%;
+  -webkit-filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
+          filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
 }
 
 .endodoncia {
@@ -1793,11 +1836,13 @@ body {
   font-family: "aileron-thin";
   margin-bottom: 1em;
   color: var(--color-text);
+  font-size: clamp(.3rem ,20vw,1.1rem);
 }
 
 .formulario__titlespan {
   color: var(--color-text);
   font-family: "aileron-thin";
+  font-size: clamp(.3rem ,20vw,1.1rem);
 }
 
 .form {
@@ -1809,16 +1854,18 @@ body {
 }
 
 .form__input {
-  outline: 1px solid var(--color-secundario-brown);
   width: 100%;
   padding: 1.5em 0em 1.5em 1.5em;
   opacity: 1;
   font-family: "aileron-thin";
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-vague);
+          box-shadow: 0 0 0 2px var(--color-secundario-vague);
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 .form__input:focus {
-  outline: 1px solid var(--color-secundario-brown);
+  outline: 0px solid var(--color-secundario-vague);
   color: var(--color-secundario-brown);
 }
 .form__input:focus::-webkit-input-placeholder {
@@ -1849,8 +1896,11 @@ body {
 
 .form__textarea {
   width: 100%;
-  border: 1px solid var(--color-secundario-brown);
+  border: 0px solid var(--color-secundario-brown);
   resize: vertical;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-vague);
+          box-shadow: 0 0 0 2px var(--color-secundario-vague);
   padding: 1.5em 0em 1.5em 1.5em;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
@@ -1910,9 +1960,12 @@ body {
   width: 1em;
   height: 1em;
   cursor: pointer;
-  outline: 1px solid var(--color-text);
+  outline: 0px solid var(--color-text);
   margin-right: 0.5em;
   position: relative;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-vague);
+          box-shadow: 0 0 0 2px var(--color-secundario-vague);
 }
 .checkbox__input:checked::after {
   content: "";
@@ -1979,6 +2032,7 @@ body {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-weight: 900;
+  border-radius: 8px;
 }
 .submit:hover {
   color: var(--color-secundario-white);
