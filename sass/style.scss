@@ -283,6 +283,52 @@
         width: 50%;
         @include mixin.smallTablet{width: 80%;}
 }
+
+.slider__copytitlelast{
+    font-family: 'openSans';
+    letter-spacing: 3px;
+    color: var(--color-secundario-vague);
+    text-align: center;
+    font-size: clamp(3rem ,20vw,2rem);
+    text-transform: uppercase;
+    line-height: 1.3;
+    position: relative;
+    z-index: 0;
+    margin-bottom: .8em;
+    
+
+    @include mixin.smallTablet{
+        text-align: start;
+        font-size: clamp(2rem ,20vw,2rem);
+    }
+    @include mixin.mobile{
+        font-size: clamp(1rem ,20vw,1.4rem);
+
+    }
+    
+}
+
+.slider__copylast{
+    color: var(--color-secundario-white);    
+    text-align: center;
+    font-size: clamp(1rem ,20vw,1.3rem);
+    position: relative;
+    z-index: 1;
+    line-height: 1.8;
+    
+    @include mixin.smallTablet(1250px){
+        font-size: clamp(.3rem ,20vw,1rem)
+    }
+    
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1.1rem)
+    }
+
+    .slider__copycolors{
+        font-weight: 900;
+        color: var(--color-secundario-vague);
+    }
+}
 .slider__copytitle{
     font-family: 'openSans';
     letter-spacing: 3px;
@@ -310,6 +356,8 @@
     }
     
 }
+
+
 .slider__copytitlemobile{
     margin-bottom: 2em;
 }
@@ -333,7 +381,7 @@
     text-align: center;
     color: var(--color-secundario-white);
     font-size: clamp(1rem ,20vw,1.3rem);
-    line-height: 1.4;
+    line-height: 1.8;
     @include mixin.smallTablet(1250px){
         font-size: clamp(.3rem ,20vw,1rem)
     }
@@ -363,7 +411,7 @@
     font-size: clamp(1rem ,20vw,1.3rem);
     position: relative;
     z-index: 1;
-    line-height: 1.4;
+    line-height: 1.8;
     
 
     @include mixin.smallTablet(1250px){
@@ -390,13 +438,44 @@
     font-family: 'montserrat';
     font-weight: 900;
     text-transform: uppercase;
-    border-radius: 3em;
+    border-radius: 8px;
     margin-top: 3em;
     font-size: clamp(.7em,20vw,1em);
+    @include mixin.flex(row,nowrap,flex-end,center);
     @include mixin.smallTablet{
         margin-top: 2em;
         padding: 1em 2.5em 1em 2.5em;
     }
+    transition: all .3s ease-in-out;
+    
+.slider__btnarrow{
+    position: absolute;
+
+}
+.slider__btncont{
+
+}
+.slider__btnimg{
+    width: .5em;
+    filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(6264%) hue-rotate(276deg) brightness(124%) contrast(83%);
+    transform: translateX(-100%);
+    transition: all .3s ease-in-out;
+    opacity: 0.1;
+    
+}
+
+&:hover .slider__btnimg{
+    transform: translateX(250%);
+    transition: all .3s ease;
+    opacity: 1;
+
+}
+&:hover {
+    letter-spacing: 1px;
+    transition: all .3s ease;
+
+
+}
 }
 
 .arrow{
@@ -492,7 +571,7 @@
                 font-size: clamp(.3rem ,20vw,1.4rem);
                 line-height: 1.3;
                 color: var(--color-text);
-                padding: 2em 0em 0em 0em;
+                margin-top: 2.5em;
                 @include mixin.mobile(768px){width: 100%;font-size: clamp(.3rem ,20vw,1.2rem);; padding: 2em 0em 0em 0em;}
             }
         }
@@ -509,9 +588,8 @@
         background-size: cover;
         background-position: bottom;
         background-repeat: no-repeat;
-        padding: 4em 0em 4em 0em;
+        padding: 8em 0em 8em 0em;
         position: relative;
-        margin-bottom: 12em;
         
         &::before{
             content: "";
@@ -600,7 +678,75 @@
     }
     
 }
+.email{
+    background: var(--color-secundario-white);
+    padding: 10em 0em 10em 0em;
+    margin-bottom: 20em;
+}
+.submit__cont{
+    text-align: center;
+}
+.email__h4{
+    font-family: "montserrat";
+    font-weight: 900;
+    font-size: clamp(.3rem ,20vw,1.8rem);
+    margin-bottom: 2em;
+    color: var(--color-secundario-black);
+    line-height: 1.4;
+    @include mixin.smallTablet{
+        font-size: clamp(.3rem ,20vw,1.4rem);
 
+    }
+}
+.email__p{
+    font-size: clamp(1rem ,20vw,1.3rem);
+    margin-bottom: 2em;
+    color: var(--color-secundario-vague);
+    font-weight: 900;
+    @include mixin.smallTablet{
+        font-size: clamp(.3rem ,20vw,.9rem);
+
+    }
+}
+.email__cont{
+    position:relative;
+
+}
+.email__width{
+    @include mixin.flex(row,nowrap,center,center);
+
+}
+.submit__emailinput{
+    width: 30%;
+    outline: 1px solid var(--color-secundario-vague);
+    border-radius: 8px 0px 0px 8px;
+    -webkit-border-radius: 8px 0px 0px 8px;
+    padding: 1em 0em 1em 1em;
+    font-family: 'aileron-thin';
+    color: var(--color-secundario-black);
+
+    @include mixin.smallTablet{
+        width: 70%;
+    }
+    @include mixin.mobile{
+        width: 60%;
+    }
+    &:focus::placeholder{
+        opacity: 0;
+        transition: all .1s ease-in-out;
+    }
+}
+.submit__btn{
+    padding: 1em 1em 1em 1em ;
+    background-color: var(--color-secundario-vague);
+    outline: 1px solid var(--color-secundario-vague);
+    cursor: pointer;
+    border-radius: 0px 8px 8px 0px;
+
+}
+.submit__btnimg{
+
+}
 
 .endodoncia{
     width: 100%;
@@ -660,12 +806,37 @@
 
 .tabs{
     width: 100%;
-    
+    background-image: url(../assets/tabs.webp);
+    background-size: 100% auto;
+    background-position:  top;
+    padding: 8em 0em 8em 0em;
     @include mixin.flex(row,nowrap,center,center);
+    position: relative;
+    margin-bottom: 15em;
+    @include mixin.smallTablet{
+        background-image: none;
+        padding: 0em 0em 8em 0em;
+
+    }
+
+    &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-secundario-brown);
+    opacity: 0.6;
+    z-index: 0;
+    @include mixin.smallTablet{
+        background: transparent;
+
+    }
+    }
 }
 .tabs__cont{
     width: 90%;
-    padding: 0em 0em 10em 0em;
+    z-index: 1;
     @include mixin.smallTablet(768px){display: none;}
 }
 .tabs__width{
@@ -675,26 +846,25 @@
     @include mixin.flex(row,nowrap,flex-start,center)
 }
 .tabs__li{
-    border-top: 1px solid var(--color-secundario-brown);
-    border-left: 1px solid var(--color-secundario-brown);
+    border-top: 1px solid var(--color-secundario-vague);
+    border-left: 1px solid var(--color-secundario-vague);
     padding: 1em;
     cursor: pointer;
     font-family: 'montserrat';
     font-weight: 900;
-    color: var(--color-text);
+    color: var(--color-secundario-white);
     transform: all .4s ease-in-out;
     &.active{
         color: var(--color-secundario-vague);
     }
     &:nth-child(3){
-        border-right: 1px solid var(--color-secundario-brown);
-
+        border-right: 1px solid var(--color-secundario-vague);
     }
 }
 .tabs__infoul{
     width: 100%;
     position: relative;
-    border: 1px solid black;
+    border: 1px solid var(--color-secundario-vague);
     padding: 2em 0em 8em 0em;
     @include mixin.smallTablet(1065px){padding: 2em 0em 10em 0em;}
 }
@@ -718,23 +888,43 @@
     width: 80%;
     font-family: 'montserrat';
     line-height: 1.4;
-    color: var(--color-text);
+    color: var(--color-secundario-white);
 }
 
 
 .tabstwo__cont{
     display: none;
-    @include mixin.smallTablet(768px){display: block;}
+    z-index: 1;
+    @include mixin.smallTablet(768px){
+        display: block;
+        width: 100%;
+        background-image: url(../assets/card_3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 4em 0em 4em 0em;
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-secundario-brown);
+            opacity: 0.6;
+
+        }
+    }
 }
 .tabstwo__width{
-    padding: 0em 0em 10em 0em;
-    @include mixin.smallTablet(768px){padding: 0em 0em 14em 0em;}
+    position: relative;
+    z-index: 1;
 }
 .tabstwo__ul{
     
 }
 .tabstwo__li{
-    border-bottom: 1px solid var(--color-secundario-brown);
+    border-bottom: 1px solid var(--color-secundario-vague);
 }
 .tabstwo__titlecont{
     width: 100%;
@@ -743,7 +933,7 @@
     padding: 1em 1em 1em 1em;
     font-family: 'montserrat';
     font-weight: 900;
-    color: var(--color-text);
+    color: var(--color-secundario-vague);
 
 }
 
@@ -786,7 +976,7 @@
     
 }
 .tabstwo__infop{
-    color: var(--color-text);
+    color: var(--color-secundario-vague);
     padding: 0em 0em 2em 0em;
 }
 
@@ -856,19 +1046,22 @@
     @include mixin.flex(column,nowrap,center,self-start)
 }
 .contacto__horariotitles{
-    font-family: 'aileron-thin';
     font-weight: 900;
     color: var(--color-secundario-brown);
-    margin-bottom: .5em;
+    margin-bottom: .8em;
     letter-spacing: 2px;
 
 }
 .contacto__horariosp{
     font-family: 'aileron-thin';
+    font-size: clamp(.3rem ,20vw,1.1rem);
     color: var(--color-text);
+    
 }
 
 .contacto__horariosother{
+    font-family: 'aileron-thin';
+    color: var(--color-text);
     margin-top: 1em;
 }
 
@@ -947,6 +1140,7 @@
 }
 .iframe__infop{
     width: 80%;
+    font-family: 'aileron-thin';
     font-size: clamp(.3rem ,20vw,1.1rem);
     color: var(--color-text);
     margin-bottom: 2.5em;
@@ -957,6 +1151,7 @@
 }
 .iframe__infocont{
     font-size: clamp(.3rem ,20vw,1.1rem);
+    font-family: 'aileron-thin';
 
     &:not(:last-child){
         margin-bottom: 2em;
@@ -982,6 +1177,7 @@
 }
 
 .iframe__infotel{
+    font-family: 'aileron-thin';
     color: var(--color-secundario-vague);
 }
 .iframe__infotela{
@@ -1010,11 +1206,14 @@
 }
 
 .formulario__titlep{
+    font-family: 'aileron-thin';
     margin-bottom: 1em;
     color: var(--color-text);
+    
 }
 .formulario__titlespan{
     color: var(--color-text);
+    font-family: 'aileron-thin';
 
 }
 .form{
@@ -1030,7 +1229,8 @@
     width: 100%;
     padding: 1.5em 0em 1.5em 1.5em;
     opacity: 1;
-    font-family: 'montserrat';
+    font-family: 'aileron-thin';
+
     transition: all .1s ease-in-out;
 
     &:focus{
@@ -1050,6 +1250,7 @@
     resize: vertical;
     padding: 1.5em 0em 1.5em 1.5em;
     transition: all .1s ease-in-out;
+    font-family: 'aileron-thin';
 
     &:focus{
         outline: none;
@@ -1108,6 +1309,8 @@
 
 .checkbox__politicap{
     color: var(--color-text);
+    font-family: 'aileron-thin';
+
     @include mixin.mobile{font-size: clamp(.5em,20vw,.8em);}
 }
 .checkbox__politica{
@@ -1129,7 +1332,7 @@
 .button__cont{
     width: 100%;
     @include mixin.flex(row,nowrap,center,center);
-    margin-top: 1em;
+    margin-top: 3em;
 }
 .submit{
     background: var(--color-secundario-brown);
@@ -1137,7 +1340,7 @@
     cursor: pointer;
     color: var(--color-secundario-vague);
     transition: all .3s ease-in-out;
-
+    font-weight: 900;
     &:hover{
         color: var(--color-secundario-white);
     }
