@@ -453,8 +453,8 @@ body {
   top: 0px;
   left: 0px;
   opacity: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .slider__imgscont.active {
   opacity: 1;
@@ -1018,7 +1018,7 @@ body {
   text-align: center;
 }
 
-.email__h4 {
+.email__h5 {
   font-family: "montserrat";
   font-weight: 900;
   font-size: clamp(.3rem ,20vw,1.8rem);
@@ -1027,13 +1027,13 @@ body {
   line-height: 1.4;
 }
 @media screen and (max-width: 768px) {
-  .email__h4 {
+  .email__h5 {
     font-size: clamp(.3rem ,20vw,1.4rem);
     text-transform: uppercase;
   }
 }
 @media screen and (max-width: 480px) {
-  .email__h4 {
+  .email__h5 {
     margin-bottom: 1em;
   }
 }
@@ -1073,7 +1073,7 @@ body {
 }
 
 .email__width {
-  width: 40%;
+  width: 30%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1141,12 +1141,12 @@ body {
   position: absolute;
   right: -1em;
   padding: 1.2em 3em 1.2em 3em;
-  background: var(--color-secundario-brown);
+  background: var(--color-secundario-vague);
   outline: 0px solid var(--color-secundario-brown);
   cursor: pointer;
   border-radius: 0px 8px 8px 0px;
-  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-brown);
-          box-shadow: 0 0 0 2px var(--color-secundario-brown);
+  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-vague);
+          box-shadow: 0 0 0 2px var(--color-secundario-vague);
 }
 @media screen and (max-width: 768px) {
   .submit__btn {
@@ -1156,8 +1156,6 @@ body {
 
 .submit__btnimg {
   width: 50%;
-  -webkit-filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
-          filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
 }
 
 .endodoncia {
@@ -1846,7 +1844,7 @@ body {
 }
 
 .form {
-  margin-top: 1.5em;
+  margin-top: 2em;
 }
 
 .form__label:not(:last-child) {

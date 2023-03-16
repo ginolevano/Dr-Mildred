@@ -248,7 +248,7 @@
     top: 0px;
     left: 0px;
     opacity: 0;
-    transition: all .3s ease-in-out;
+    transition: all .4s ease;
     &.active{
         opacity: 1;
     }
@@ -678,6 +678,38 @@
     }
     
 }
+
+
+.info{
+    
+}
+.info__h4{
+    
+}
+.info__imgtext{
+    
+}
+.info__imgtextcont{
+    
+}
+.info__img{
+    
+}
+.info__text{
+    
+}
+.info__textcont{
+    
+}
+.info__textp{
+    
+}
+
+
+
+
+
+
 .email{
     background: var(--color-secundario-white);
     padding: 10em 0em 10em 0em;
@@ -686,7 +718,7 @@
 .submit__cont{
     text-align: center;
 }
-.email__h4{
+.email__h5{
     font-family: "montserrat";
     font-weight: 900;
     font-size: clamp(.3rem ,20vw,1.8rem);
@@ -724,7 +756,7 @@
     @include mixin.flex(row,nowrap,center,center);
 }
 .email__width{
-    width: 40%;
+    width: 30%;
     position: relative;
     @include mixin.flex(row,nowrap,flex-start,center);
     @include mixin.smallTablet{
@@ -753,18 +785,18 @@
     position: absolute;
     right: -1em;
     padding: 1.2em 3em 1.2em 3em;
-    background: var(--color-secundario-brown);
+    background: var(--color-secundario-vague);
     outline: 0px solid var(--color-secundario-brown);
     cursor: pointer;
     border-radius: 0px 8px 8px 0px;
-    box-shadow:0 0 0 2px var(--color-secundario-brown);
+    box-shadow:0 0 0 2px var(--color-secundario-vague);
     @include mixin.smallTablet{
         right: 0px;
     }
 }
 .submit__btnimg{
     width:50%;
-    filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
+    //filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
 
 }
 
@@ -1237,7 +1269,7 @@
     font-size: clamp(.3rem ,20vw,1.1rem);
 }
 .form{
-    margin-top: 1.5em;
+    margin-top: 2em;
 }
 .form__label{
     &:not(:last-child){
