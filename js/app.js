@@ -25,15 +25,23 @@ $(document).ready(()=>{
     //SLIDER START//
     
     
-    // let speed = 4000
-    // let nextImgs = ((e)=>{
-    //     $('.slider__imgscont').eq(currentSlide).removeClass('active')
+    
 
-    //     currentSlide = (currentSlide + 1) % $('.slider__imgscont').length;
-    //     $('.slider__imgscont').eq(currentSlide).addClass('active')
-    // })
-    // setInterval(nextImgs,speed);
+    // VELOCIDAD
+    let run = 3000
+    //DECLARO MIS FUNCTION
 
+    let nextImg = ((e)=>{
+        $('.info__imagenes').eq(currentSlide).removeClass('active')
+        //DECLARO MI SLIDE .LENGTH
+        currentSlide = (currentSlide + 1) % $('.info__imagenes').length;
+        $('.info__imagenes').eq(currentSlide).addClass('active')
+        console.log('todo bien')
+
+    })
+
+    setInterval(nextImg,run);
+    
     $('.right').on('click',(e)=>{
         console.log('ohh rightttt')
         foto++
