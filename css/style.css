@@ -913,7 +913,7 @@ body {
   position: relative;
   z-index: 1;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .main .card .card__ul {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -934,7 +934,7 @@ body {
     gap: 1.8em;
   }
 }
-@media screen and (max-width: 1690px) and (max-width: 768px) {
+@media screen and (max-width: 1690px) and (max-width: 1200px) {
   .main .card .card__ul {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -1073,14 +1073,14 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 0em;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .info__imgtextcont {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 3em;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .info__imgtextcont {
     gap: 0;
   }
@@ -1108,7 +1108,7 @@ body {
   z-index: 1;
   border-radius: 8px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .info__img::before {
     border-radius: 8px 8px 0px 0px;
   }
@@ -1123,7 +1123,7 @@ body {
   transition: all 1s ease;
   border-radius: 8px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .info__imagenes {
     border-radius: 8px 8px 0px 0px;
   }
@@ -1150,7 +1150,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1440px) {
+  .info__textconteiner {
+    padding: 3em 2em 3em 2em;
+  }
+}
+@media screen and (max-width: 1200px) {
   .info__textconteiner {
     width: 100%;
     padding: 4em 2em 4em 2em;
@@ -1717,7 +1722,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1em;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .contacto__horariosul {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -1840,7 +1845,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
   gap: 0em;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .formulario__width {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;

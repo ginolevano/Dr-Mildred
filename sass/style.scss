@@ -724,7 +724,8 @@
 .info__imgtextcont{
     
     @include mixin.grid(20em,0em);
-    @include mixin.smallTablet{
+    @include mixin.smallTablet(1200px){
+
         gap: 0;
 
     }
@@ -747,7 +748,7 @@
         opacity: 0.1;
         z-index: 1;
         border-radius: 8px;
-        @include mixin.smallTablet{
+        @include mixin.smallTablet(1200px){
             border-radius: 8px 8px 0px 0px;
     
         }
@@ -762,7 +763,7 @@
     border-radius: 8px;
 
     
-    @include mixin.smallTablet{
+    @include mixin.smallTablet(1200px){
         border-radius: 8px 8px 0px 0px;
 
     }
@@ -771,15 +772,16 @@
     }
 }
 .info__textconteiner{
-    
-    
     background: var(--color-secundario-vague);
     padding: 6em 3em 6em 3em;
     border-radius: 0px 8px 8px 0px;
     @include mixin.flex(row,nowrap,center,center);
-    @include mixin.smallTablet{
+    @include mixin.laptop{
+        padding: 3em 2em 3em 2em;
+
+    }
+    @include mixin.smallTablet(1200px){
         width: 100%;
-        
         padding: 4em 2em 4em 2em;
         border-radius: 0px 0px 8px 8px;
 

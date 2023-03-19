@@ -16,7 +16,7 @@
     grid-template-columns: repeat(auto-fit, minmax($columnas ,1fr));
     gap: $espacio;
 
-    @media (max-width:768px) {
+    @media (max-width:1200px) {
         grid-template-columns: 1fr;
         gap: 3em;
     }
@@ -43,5 +43,12 @@
     }
 }
 
+
+@mixin laptop($medida : 1440px){
+    @media screen and (max-width:$medida) {
+        @content;
+        
+    }
+}
 
 
