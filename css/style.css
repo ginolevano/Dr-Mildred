@@ -2186,17 +2186,18 @@ body {
 }
 
 .submit {
-  background: var(--color-secundario-brown);
-  padding: 1em 4em 1em 4em;
+  background: var(--color-secundario-vague);
+  padding: 1.5em 4em 1.5em 4em;
   cursor: pointer;
-  color: var(--color-secundario-vague);
+  color: white;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-weight: 900;
   border-radius: 8px;
 }
 .submit:hover {
-  color: var(--color-secundario-white);
+  color: var(--color-secundario-vague);
+  background: var(--color-secundario-brown);
 }
 
 .iframe__cont {
