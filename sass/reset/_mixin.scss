@@ -30,7 +30,11 @@
 
 // RESPONSIVE
 
-
+@mixin smallmobile ($medida : 320px){
+    @media screen and (max-width:$medida){
+        @content;
+    }
+}
 @mixin mobile ($medida : 480px){
     @media screen and (max-width:$medida){
         @content;
@@ -43,6 +47,17 @@
     }
 }
 
+@mixin tablet($medida : 920px){
+    @media screen and (max-width:$medida){
+        @content;
+    }
+}
+
+@mixin smalllaptop ($medida : 1024px){
+    @media screen and (max-width:$medida){
+        @content;
+    }
+}
 
 @mixin laptop($medida : 1440px){
     @media screen and (max-width:$medida) {

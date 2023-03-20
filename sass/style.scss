@@ -403,6 +403,8 @@
 }
 .slider__copywidthimg{
     width: 40%;
+    @include mixin.smallTablet(1350px){width: 70%;}
+
     @include mixin.smallTablet{width: 90%;}
 }
 .slider__copy{
@@ -432,13 +434,14 @@
 }
 .slider__btna{
     text-align: center;
-    background-color:var(--color-secundario-vague);
+    background-color:var(--color-secundario-brown);
     padding: 1.5em 4em 1.5em 4em;
-    color: var(--color-secundario-white);
+    color: var(--color-secundario-vague);
     font-family: 'montserrat';
-    font-weight: 900;
+    // font-weight: 900;
     text-transform: uppercase;
-    border-radius: 8px ;
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
     margin-top: 3em;
     font-size: clamp(.7em,20vw,1em);
     @include mixin.flex(row,nowrap,flex-end,center);
@@ -457,7 +460,7 @@
 }
 .slider__btnimg{
     width: .5em;
-    filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(6264%) hue-rotate(276deg) brightness(124%) contrast(83%);
+    filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
     transform: translateX(-100%);
     transition: all .3s ease-in-out;
     opacity: 0.1;
@@ -772,9 +775,11 @@
     }
 }
 .info__textconteiner{
-    background: var(--color-secundario-vague);
+    background: var(--color-secundario-brown);
+    color: var(--color-secundario-vague);
     padding: 6em 3em 6em 3em;
     border-radius: 0px 8px 8px 0px;
+    font-family: 'aileron-thin';
     @include mixin.flex(row,nowrap,center,center);
     @include mixin.laptop{
         padding: 3em 2em 3em 2em;
@@ -805,24 +810,38 @@
 }
 
 
-
-
-
-
 .email{
-    background: var(--color-secundario-white);
-    padding: 10em 0em 10em 0em;
-    margin-bottom: 20em;
+    width: 100%;
+    min-height: 50vh;
+    background-color: var(--color-secundario-vague);
+    // padding: 10em 0em 10em 0em;
+    @include mixin.flex(row,nowrap,center,center);
+    position: relative;
+    z-index: -1;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 60%;
+        min-height: 50vh;
+        background-image: url(../assets/newsletter.png);
+        background-size: cover;
+        background-position: right top;
+        z-index: -1;
+    }
 }
+
 .submit__cont{
-    text-align: center;
+    width: 80%;
+    text-align: start;
 }
 .email__h5{
     font-family: "montserrat";
     font-weight: 900;
     font-size: clamp(.3rem ,20vw,1.8rem);
     margin-bottom: 2em;
-    color: var(--color-secundario-black);
+    color: var(--color-secundario-brown);
     line-height: 1.4;
     
     @include mixin.smallTablet{
@@ -840,7 +859,7 @@
 .email__p{
     font-size: clamp(1rem ,20vw,1.3rem);
     margin-bottom: 2em;
-    color: var(--color-secundario-vague);
+    color: var(--color-secundario-white);
     font-weight: 900;
     @include mixin.smallTablet{
         font-size: clamp(.3rem ,20vw,.9rem);
@@ -851,11 +870,12 @@
     }
 }
 .email__cont{
-    width: 100%;
-    @include mixin.flex(row,nowrap,center,center);
+    width: 50%;
+    @include mixin.flex(row,nowrap,flex-start,center);
+    background: blue;
 }
 .email__width{
-    width: 30%;
+    width: 100%;
     position: relative;
     @include mixin.flex(row,nowrap,flex-start,center);
     @include mixin.smallTablet{
@@ -864,9 +884,9 @@
 }
 .submit__emailinput{
     width: 100%;
-    outline: 0px solid var(--color-secundario-vague);
+    outline: 0px solid var(--color-secundario-brown);
     border-radius: 8px 0px 0px 8px;
-    box-shadow:0 0 0 2px var(--color-secundario-vague);
+    box-shadow:0 0 0 2px var(--color-secundario-brown);
     padding: 1em 0em 1em 1em;
     font-family: 'aileron-thin';
     color: var(--color-secundario-black);
@@ -883,19 +903,20 @@
 .submit__btn{
     position: absolute;
     right: -1em;
-    padding: 1.2em 3em 1.2em 3em;
-    background: var(--color-secundario-vague);
+    top: 0px;
+    padding: 1.2em 3em 1.18em 3em;
+    background: var(--color-secundario-brown);
     outline: 0px solid var(--color-secundario-brown);
     cursor: pointer;
     border-radius: 0px 8px 8px 0px;
-    box-shadow:0 0 0 2px var(--color-secundario-vague);
+    box-shadow:0 0 0 2px var(--color-secundario-brown);
     @include mixin.smallTablet{
         right: 0px;
     }
 }
 .submit__btnimg{
     width:50%;
-    //filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
+    filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
 
 }
 
@@ -1508,7 +1529,6 @@
 
 .iframe{
     width: 90%;
-    background-color: red;
     @include mixin.flex(row,nowrap,center,center);
 
 }

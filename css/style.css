@@ -629,6 +629,11 @@ body {
 .slider__copywidthimg {
   width: 40%;
 }
+@media screen and (max-width: 1350px) {
+  .slider__copywidthimg {
+    width: 70%;
+  }
+}
 @media screen and (max-width: 768px) {
   .slider__copywidthimg {
     width: 90%;
@@ -674,13 +679,14 @@ body {
 
 .slider__btna {
   text-align: center;
-  background-color: var(--color-secundario-vague);
+  background-color: var(--color-secundario-brown);
   padding: 1.5em 4em 1.5em 4em;
-  color: var(--color-secundario-white);
+  color: var(--color-secundario-vague);
   font-family: "montserrat";
-  font-weight: 900;
   text-transform: uppercase;
   border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   margin-top: 3em;
   font-size: clamp(.7em,20vw,1em);
   display: -webkit-box;
@@ -710,8 +716,8 @@ body {
 }
 .slider__btna .slider__btnimg {
   width: 0.5em;
-  -webkit-filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(6264%) hue-rotate(276deg) brightness(124%) contrast(83%);
-          filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(6264%) hue-rotate(276deg) brightness(124%) contrast(83%);
+  -webkit-filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
+          filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: all 0.3s ease-in-out;
@@ -1133,9 +1139,11 @@ body {
 }
 
 .info__textconteiner {
-  background: var(--color-secundario-vague);
+  background: var(--color-secundario-brown);
+  color: var(--color-secundario-vague);
   padding: 6em 3em 6em 3em;
   border-radius: 0px 8px 8px 0px;
+  font-family: "aileron-thin";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1176,13 +1184,41 @@ body {
 }
 
 .email {
-  background: var(--color-secundario-white);
-  padding: 10em 0em 10em 0em;
-  margin-bottom: 20em;
+  width: 100%;
+  min-height: 50vh;
+  background-color: var(--color-secundario-vague);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: -1;
+}
+.email::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60%;
+  min-height: 50vh;
+  background-image: url(../assets/newsletter.png);
+  background-size: cover;
+  background-position: right top;
+  z-index: -1;
 }
 
 .submit__cont {
-  text-align: center;
+  width: 80%;
+  text-align: start;
 }
 
 .email__h5 {
@@ -1190,7 +1226,7 @@ body {
   font-weight: 900;
   font-size: clamp(.3rem ,20vw,1.8rem);
   margin-bottom: 2em;
-  color: var(--color-secundario-black);
+  color: var(--color-secundario-brown);
   line-height: 1.4;
 }
 @media screen and (max-width: 768px) {
@@ -1208,7 +1244,7 @@ body {
 .email__p {
   font-size: clamp(1rem ,20vw,1.3rem);
   margin-bottom: 2em;
-  color: var(--color-secundario-vague);
+  color: var(--color-secundario-white);
   font-weight: 900;
 }
 @media screen and (max-width: 768px) {
@@ -1223,7 +1259,7 @@ body {
 }
 
 .email__cont {
-  width: 100%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1231,16 +1267,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: blue;
 }
 
 .email__width {
-  width: 30%;
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1264,10 +1301,10 @@ body {
 
 .submit__emailinput {
   width: 100%;
-  outline: 0px solid var(--color-secundario-vague);
+  outline: 0px solid var(--color-secundario-brown);
   border-radius: 8px 0px 0px 8px;
-  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-vague);
-          box-shadow: 0 0 0 2px var(--color-secundario-vague);
+  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-brown);
+          box-shadow: 0 0 0 2px var(--color-secundario-brown);
   padding: 1em 0em 1em 1em;
   font-family: "aileron-thin";
   color: var(--color-secundario-black);
@@ -1307,13 +1344,14 @@ body {
 .submit__btn {
   position: absolute;
   right: -1em;
-  padding: 1.2em 3em 1.2em 3em;
-  background: var(--color-secundario-vague);
+  top: 0px;
+  padding: 1.2em 3em 1.18em 3em;
+  background: var(--color-secundario-brown);
   outline: 0px solid var(--color-secundario-brown);
   cursor: pointer;
   border-radius: 0px 8px 8px 0px;
-  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-vague);
-          box-shadow: 0 0 0 2px var(--color-secundario-vague);
+  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-brown);
+          box-shadow: 0 0 0 2px var(--color-secundario-brown);
 }
 @media screen and (max-width: 768px) {
   .submit__btn {
@@ -1323,6 +1361,8 @@ body {
 
 .submit__btnimg {
   width: 50%;
+  -webkit-filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
+          filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(3586%) hue-rotate(312deg) brightness(81%) contrast(85%);
 }
 
 .endodoncia {
@@ -2220,7 +2260,6 @@ body {
 
 .iframe {
   width: 90%;
-  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
