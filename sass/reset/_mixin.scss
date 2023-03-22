@@ -16,11 +16,12 @@
     grid-template-columns: repeat(auto-fit, minmax($columnas ,1fr));
     gap: $espacio;
 
-    @media (max-width:1200px) {
-        grid-template-columns: 1fr;
-        gap: 3em;
-    }
+    // @media (max-width:1200px) {
+    //     grid-template-columns: 1fr;
+    //     gap: 3em;
+    // }
 }
+
 @mixin name ($colors) {
     background: $colors;
 }

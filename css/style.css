@@ -915,47 +915,31 @@ body {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
-  gap: 2em;
+  gap: 1.5em;
   position: relative;
   z-index: 1;
 }
-@media (max-width: 1200px) {
-  .main .card .card__ul {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    gap: 3em;
-  }
-}
-@media screen and (max-width: 550px) {
-  .main .card .card__ul {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 1690px) {
+@media screen and (max-width: 480px) {
   .main .card .card__ul {
     display: -ms-grid;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
-    gap: 1.8em;
-  }
-}
-@media screen and (max-width: 1690px) and (max-width: 1200px) {
-  .main .card .card__ul {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    gap: 3em;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 1em;
   }
 }
 .main .card .card__li {
+  width: 100%;
+  min-height: 40em;
   background: white;
   border-radius: 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-.main .card .card__box {
-  width: 100%;
-  min-height: 40em;
+@media screen and (max-width: 1380px) {
+  .main .card .card__li {
+    min-height: 40em;
+  }
 }
 .main .card .card__img {
   width: 100%;
@@ -965,6 +949,27 @@ body {
   background-position: top left;
   border-radius: 8px 8px 0px 0px;
 }
+@media screen and (max-width: 1380px) {
+  .main .card .card__img {
+    min-height: 18em;
+  }
+}
+@media screen and (max-width: 859px) {
+  .main .card .card__img {
+    min-height: 23em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main .card .card__img {
+    min-height: 18em;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main .card .card__img {
+    min-height: 8em;
+  }
+}
 .main .card .card__img1 {
   width: 100%;
   min-height: 18em;
@@ -973,6 +978,22 @@ body {
   background-position: top left;
   border-radius: 8px 8px 0px 0px;
 }
+@media screen and (max-width: 859px) {
+  .main .card .card__img1 {
+    min-height: 23em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main .card .card__img1 {
+    min-height: 18em;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main .card .card__img1 {
+    min-height: 8em;
+  }
+}
 .main .card .card__img2 {
   width: 100%;
   min-height: 18em;
@@ -980,6 +1001,27 @@ body {
   background-size: cover;
   background-position: top left;
   border-radius: 8px 8px 0px 0px;
+}
+@media screen and (max-width: 1380px) {
+  .main .card .card__img2 {
+    min-height: 18em;
+  }
+}
+@media screen and (max-width: 859px) {
+  .main .card .card__img2 {
+    min-height: 23em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main .card .card__img2 {
+    min-height: 18em;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main .card .card__img2 {
+    min-height: 8em;
+  }
 }
 .main .card .card__info {
   width: 100%;
@@ -1007,11 +1049,16 @@ body {
   letter-spacing: 2px;
 }
 .main .card .card__info .card__p {
-  width: 75%;
+  width: 73%;
   text-align: center;
   font-family: "aileron-thin";
   color: var(--color-text);
   font-size: clamp(.3rem ,20vw,1.1rem);
+}
+@media screen and (max-width: 1440px) {
+  .main .card .card__info .card__p {
+    width: 80%;
+  }
 }
 
 .info {
@@ -1036,6 +1083,11 @@ body {
 
 .info__conteiner {
   width: 80%;
+}
+@media screen and (max-width: 1294px) {
+  .info__conteiner {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 768px) {
   .info__conteiner {
@@ -1079,16 +1131,18 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 0em;
 }
-@media (max-width: 1200px) {
-  .info__imgtextcont {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    gap: 3em;
-  }
-}
 @media screen and (max-width: 1200px) {
   .info__imgtextcont {
     gap: 0;
+  }
+}
+@media screen and (max-width: 840px) {
+  .info__imgtextcont {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    gap: 0em;
   }
 }
 
@@ -1114,7 +1168,7 @@ body {
   z-index: 1;
   border-radius: 8px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 840px) {
   .info__img::before {
     border-radius: 8px 8px 0px 0px;
   }
@@ -1129,7 +1183,7 @@ body {
   transition: all 1s ease;
   border-radius: 8px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 840px) {
   .info__imagenes {
     border-radius: 8px 8px 0px 0px;
   }
@@ -1163,7 +1217,7 @@ body {
     padding: 3em 2em 3em 2em;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 840px) {
   .info__textconteiner {
     width: 100%;
     padding: 4em 2em 4em 2em;
@@ -1185,7 +1239,7 @@ body {
 
 .email {
   width: 100%;
-  min-height: 50vh;
+  min-height: 48vh;
   background-color: var(--color-secundario-vague);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1201,24 +1255,70 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
-.email::after {
+@media screen and (max-width: 768px) {
+  .email {
+    margin-bottom: 14em;
+  }
+}
+.email::before {
   content: "";
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 60%;
-  min-height: 50vh;
+  max-width: 800px;
+  width: 100%;
+  min-height: 48vh;
   background-image: url(../assets/newsletter.png);
   background-size: cover;
   background-position: right top;
   z-index: -1;
 }
+@media screen and (max-width: 1420px) {
+  .email::before {
+    background-size: 160% auto;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .email::before {
+    background-size: 205% auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .email::before {
+    background-size: 205% auto;
+    background-position: bottom left;
+    -webkit-filter: blur(0.15em);
+            filter: blur(0.15em);
+  }
+}
+.email::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--color-secundario-brown);
+  opacity: 0.2;
+  z-index: -1;
+}
+@media screen and (max-width: 550px) {
+  .email::after {
+    opacity: 0.2;
+  }
+}
 
 .submit__cont {
   width: 80%;
   text-align: start;
+}
+@media screen and (max-width: 768px) {
+  .submit__cont {
+    width: 90%;
+  }
 }
 
 .email__h5 {
@@ -1273,7 +1373,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: blue;
+  border-radius: 8px 0px 0px 8px;
+}
+@media screen and (max-width: 1440px) {
+  .email__cont {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .email__cont {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .email__cont {
+    width: 100%;
+  }
 }
 
 .email__width {
@@ -1309,6 +1424,7 @@ body {
   font-family: "aileron-thin";
   color: var(--color-secundario-black);
   position: relative;
+  background-color: white;
 }
 @media screen and (max-width: 768px) {
   .submit__emailinput {
@@ -1345,18 +1461,14 @@ body {
   position: absolute;
   right: -1em;
   top: 0px;
-  padding: 1.2em 3em 1.18em 3em;
+  padding: 1.2em 3em 1.15em 3em;
   background: var(--color-secundario-brown);
   outline: 0px solid var(--color-secundario-brown);
   cursor: pointer;
   border-radius: 0px 8px 8px 0px;
   -webkit-box-shadow: 0 0 0 2px var(--color-secundario-brown);
           box-shadow: 0 0 0 2px var(--color-secundario-brown);
-}
-@media screen and (max-width: 768px) {
-  .submit__btn {
-    right: 0px;
-  }
+  cursor: pointer;
 }
 
 .submit__btnimg {
@@ -1762,13 +1874,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1em;
 }
-@media (max-width: 1200px) {
-  .contacto__horariosul {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    gap: 3em;
-  }
-}
 
 .contacto__horariosli {
   width: 100%;
@@ -1884,13 +1989,6 @@ body {
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
   gap: 0em;
-}
-@media (max-width: 1200px) {
-  .formulario__width {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    gap: 3em;
-  }
 }
 @media screen and (max-width: 768px) {
   .formulario__width {
