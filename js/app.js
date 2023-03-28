@@ -11,9 +11,7 @@ let currentSlide = 0;
 $(document).ready(()=>{
     $('.menumovil__box').on('click',()=>{
 
-        $('.menumovil__lines').toggleClass('active')
-        console.log('todo bien')
-        
+        $('.menumovil__lines').toggleClass('active')        
         $('.menumobile').toggleClass('active')
         $('.menumobile__li').toggleClass('active')
         $('.menumobile__rrssli').toggleClass('active')
@@ -21,12 +19,8 @@ $(document).ready(()=>{
 
 
 
-
-    //SLIDER START//
     
     
-    
-
     // VELOCIDAD
     let run = 3000
     //DECLARO MIS FUNCTION
@@ -36,14 +30,16 @@ $(document).ready(()=>{
         //DECLARO MI SLIDE .LENGTH
         currentSlide = (currentSlide + 1) % $('.info__imagenes').length;
         $('.info__imagenes').eq(currentSlide).addClass('active')
-        console.log('todo bien')
 
     })
 
     setInterval(nextImg,run);
-    
+
+
+//SLIDER START//
+
     $('.right').on('click',(e)=>{
-        console.log('ohh rightttt')
+
         foto++
         if(foto === $('.slider__imgscont').length){
             foto = 0;
@@ -62,7 +58,7 @@ $(document).ready(()=>{
         $('.slider__imgscont').removeClass('active')
         $('.slider__imgscont').eq(foto).addClass('active')
     })
-//SLIDER START//
+//SLIDER END//
 
 
     // START TABS
@@ -92,12 +88,26 @@ $(document).ready(()=>{
                 $arrow.addClass('active')
 
             )
-
-            console.log('estoy haciendo click a cada uno')
-
         })
     })
     
 
     // END TABS
+
+
+
+
+    //START COOKIES 
+
+    $('.aceptar__cookies').on('click',(e)=>{
+        console.log('acepto cokkies')
+
+        $('.cookies__cont').removeClass('active')
+
+    })
+
+
+        //END COOKIES 
+
+    
 })

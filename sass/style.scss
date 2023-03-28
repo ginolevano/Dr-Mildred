@@ -6,7 +6,6 @@
 
 
 
-
 .conteiner__header{
     width: 100%;
     display: flex;
@@ -520,7 +519,6 @@
 }
 
 
-
 .main{
     width: 100%;
     background-color: var(--color-secundario);
@@ -910,38 +908,34 @@
         
     }
     &::before{
-        content: "2222";
+        content: "";
         position: absolute;
+        display: inline-block;
         top: 0px;
         right: 0px;
         max-width : 800px;
         width: 100%;
         min-height: 48vh;
-        background-image: url(../assets/newsletter.jpg);
+        background-image: url(../assets/sonrisas.jpg);
         background-size: cover;
         background-position: right top;
         z-index: -1;
 
         @include mixin.laptop(1420px){
-            background-size: 160% auto;
+            background-size: 150% auto;
             background-repeat: no-repeat;
             background-position: left;
         }
         @include mixin.smalllaptop{
-            background-size: 205% auto;
+            background-size: 150% auto;
             
         }
-        @include mixin.smallTablet(850px){
-            filter: blur(0.1em);
 
-        }
         @include mixin.smallTablet{
-            background-size: 205% auto;
-            background-position: top left;
-
+            
+            display: none;
         }
-        @include mixin.mobile{
-        }
+        
     }
     &::after{
         content: "";
@@ -950,6 +944,7 @@
         width: 100%;
         height: 100%;
         background: var(--color-secundario-brown);
+        
         opacity: .2;
         z-index: -1;
         @include mixin.laptop(1420px){
@@ -1827,5 +1822,100 @@
 }
 .footer__rrssimg{
 
+}
+
+.cookies{
+    width: 100%;
+    position: absolute;
+    top: 0rem;
+    z-index: 2;    
+    @include mixin.smallTablet{
+        
+        z-index: 9;
+    }
+    
+}
+
+.cookies__cont{
+    width: 100%;
+    background-color: white;
+    padding: 2em 2em 2em 2em ;
+    position: fixed;
+    bottom: 0px;
+    border-top: 2px solid var(--color-secundario-vague);
+    @include mixin.flex(row,nowrap,center,center);
+    transform: translateY(20rem);
+    opacity: 0;
+    transition: all 1.5s ease;
+
+    @include mixin.laptop(1250px){
+        @include mixin.flex(column,nowrap,center,center)
+
+    }
+    &.active{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.cookies__title{
+    width: 60%;
+    @include mixin.laptop(1250px){
+        width: 100%;
+    }
+    // @include mixin.smallTablet{
+    //     width: 100%;
+
+    // }
+
+    .cookies__p{
+        color: var(--color-text);
+        font-size: clamp(.3rem ,20vw, 1rem);
+        font-family: 'aileron-thin';
+
+        @include mixin.laptop(1250px){
+            font-size: clamp(.3rem ,20vw,.8rem);
+            
+        }
+    }
+    .cookies__span{
+        color: var(--color-secundario-vague);
+        border-bottom: 2px solid var(--color-secundario-vague);
+        cursor: pointer;
+    }
+}
+.cookies__allbtns{
+    width: 40%;
+    @include mixin.smallTablet{
+        width: 100%;
+    }
+}
+.cookies__btn{
+    @include mixin.flex(row,nowrap,center,center)
+}
+.cookies__button{
+    cursor: pointer;
+    background-color: transparent;
+    padding: 1em 3em 1em 3em;
+    border-radius: 8px;
+    color: var(--color-secundario-vague);
+    font-weight: 900;
+    font-size: clamp(.3rem ,20vw, 1rem);
+
+
+    &:not(:first-child){
+        border: 2px solid var(--color-secundario-vague);
+
+    }
+    &:not(:last-child){
+        margin-right: 1em;
+        background-color: var(--color-secundario-brown);
+        border: 2px solid var(--color-secundario-brown);
+
+    }
+    @include mixin.laptop(1250px){
+        margin-top: 2em;
+        font-size: clamp(.3rem ,20vw,.5rem);
+
+    }
 }
 

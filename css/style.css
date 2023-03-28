@@ -1293,40 +1293,34 @@ body {
   }
 }
 .email::before {
-  content: "2222";
+  content: "";
   position: absolute;
+  display: inline-block;
   top: 0px;
   right: 0px;
   max-width: 800px;
   width: 100%;
   min-height: 48vh;
-  background-image: url(../assets/newsletter.jpg);
+  background-image: url(../assets/sonrisas.jpg);
   background-size: cover;
   background-position: right top;
   z-index: -1;
 }
 @media screen and (max-width: 1420px) {
   .email::before {
-    background-size: 160% auto;
+    background-size: 150% auto;
     background-repeat: no-repeat;
     background-position: left;
   }
 }
 @media screen and (max-width: 1024px) {
   .email::before {
-    background-size: 205% auto;
-  }
-}
-@media screen and (max-width: 850px) {
-  .email::before {
-    -webkit-filter: blur(0.1em);
-            filter: blur(0.1em);
+    background-size: 150% auto;
   }
 }
 @media screen and (max-width: 768px) {
   .email::before {
-    background-size: 205% auto;
-    background-position: top left;
+    display: none;
   }
 }
 .email::after {
@@ -2628,4 +2622,138 @@ body {
 }
 .footer__rrssli:not(:last-child) {
   margin-right: 1em;
+}
+
+.cookies {
+  width: 100%;
+  position: absolute;
+  top: 0rem;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .cookies {
+    z-index: 9;
+  }
+}
+
+.cookies__cont {
+  width: 100%;
+  background-color: white;
+  padding: 2em 2em 2em 2em;
+  position: fixed;
+  bottom: 0px;
+  border-top: 2px solid var(--color-secundario-vague);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(20rem);
+          transform: translateY(20rem);
+  opacity: 0;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+@media screen and (max-width: 1250px) {
+  .cookies__cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.cookies__cont.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.cookies__title {
+  width: 60%;
+}
+@media screen and (max-width: 1250px) {
+  .cookies__title {
+    width: 100%;
+  }
+}
+.cookies__title .cookies__p {
+  color: var(--color-text);
+  font-size: clamp(.3rem ,20vw, 1rem);
+  font-family: "aileron-thin";
+}
+@media screen and (max-width: 1250px) {
+  .cookies__title .cookies__p {
+    font-size: clamp(.3rem ,20vw,.8rem);
+  }
+}
+.cookies__title .cookies__span {
+  color: var(--color-secundario-vague);
+  border-bottom: 2px solid var(--color-secundario-vague);
+  cursor: pointer;
+}
+
+.cookies__allbtns {
+  width: 40%;
+}
+@media screen and (max-width: 768px) {
+  .cookies__allbtns {
+    width: 100%;
+  }
+}
+
+.cookies__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cookies__button {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 1em 3em 1em 3em;
+  border-radius: 8px;
+  color: var(--color-secundario-vague);
+  font-weight: 900;
+  font-size: clamp(.3rem ,20vw, 1rem);
+}
+.cookies__button:not(:first-child) {
+  border: 2px solid var(--color-secundario-vague);
+}
+.cookies__button:not(:last-child) {
+  margin-right: 1em;
+  background-color: var(--color-secundario-brown);
+  border: 2px solid var(--color-secundario-brown);
+}
+@media screen and (max-width: 1250px) {
+  .cookies__button {
+    margin-top: 2em;
+    font-size: clamp(.3rem ,20vw,.5rem);
+  }
 }
