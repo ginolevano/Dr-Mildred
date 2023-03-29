@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "aileron-thin";
-  src: url(../aileron/Aileron-Thin.otf) format("opentype");
+  font-family: "aileron-regular";
+  src: url(../aileron/Aileron-Regular.otf) format("opentype");
   font-display: swap;
 }
 @font-face {
@@ -872,11 +872,11 @@ body {
   right: 0px;
 }
 .main .main__cont .main__titles .main__p {
-  width: 70%;
+  width: 80%;
   text-align: center;
-  font-family: "aileron-thin";
-  font-size: clamp(.3rem ,20vw,1.4rem);
-  line-height: 1.3;
+  font-family: "aileron-regular";
+  font-size: clamp(.3rem ,20vw,1.2rem);
+  line-height: 1.4;
   color: var(--color-text);
   margin-top: 2.5em;
 }
@@ -1061,14 +1061,14 @@ body {
 .main .card .card__info .card__p {
   width: 73%;
   text-align: center;
-  font-family: "aileron-thin";
+  font-family: "aileron-regular";
   color: var(--color-text);
-  font-size: clamp(.3rem ,20vw,1.2rem);
-  line-height: 1.3;
+  font-size: clamp(.3rem ,20vw,1.1rem);
+  line-height: 1.4;
 }
 @media screen and (max-width: 1024px) {
   .main .card .card__info .card__p {
-    font-size: clamp(.3rem ,20vw,1.1rem);
+    font-size: clamp(.3rem ,20vw,1rem);
   }
 }
 @media screen and (max-width: 1440px) {
@@ -1225,8 +1225,9 @@ body {
   color: var(--color-secundario-vague);
   padding: 6em 3em 6em 3em;
   border-radius: 0px 8px 8px 0px;
-  font-family: "aileron-thin";
-  line-height: 1.3;
+  font-family: "aileron-regular";
+  line-height: 1.4;
+  font-size: clamp(.3rem ,20vw,1.2rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1449,8 +1450,8 @@ body {
   width: 100%;
   outline: 0px solid var(--color-secundario-brown);
   border-radius: 8px 8px 8px 8px;
-  -webkit-box-shadow: 0 0 0 1.5px var(--color-secundario-brown);
-          box-shadow: 0 0 0 1.5px var(--color-secundario-brown);
+  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-brown);
+          box-shadow: 0 0 0 2px var(--color-secundario-brown);
   padding: 1em 0em 1em 1em;
   font-family: "montserrat";
   color: var(--color-secundario-black);
@@ -1536,6 +1537,24 @@ body {
 }
 .endodoncia .endodoncia__cont {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .endodoncia .endodoncia__cont {
+    width: 90%;
+  }
 }
 .endodoncia .endodoncia__width {
   display: -webkit-box;
@@ -1580,14 +1599,66 @@ body {
   top: 1em;
   right: 0px;
 }
+.endodoncia .endodoncia__conteiner {
+  width: 90%;
+  margin-top: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: self-start;
+      -ms-flex-align: self-start;
+          align-items: self-start;
+}
+@media screen and (max-width: 1024px) {
+  .endodoncia .endodoncia__conteiner {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.endodoncia .endondoncia__size {
+  width: 50%;
+}
+@media screen and (max-width: 1024px) {
+  .endodoncia .endondoncia__size {
+    width: 100%;
+  }
+}
+.endodoncia .endondoncia__size:not(:last-child) {
+  margin-right: 2em;
+}
+@media screen and (max-width: 1024px) {
+  .endodoncia .endondoncia__size:not(:last-child) {
+    margin-right: 0em;
+    margin-bottom: 2em;
+  }
+}
 .endodoncia .endodoncia__p {
-  width: 70%;
-  text-align: center;
-  font-family: "aileron-thin";
-  font-size: clamp(.3rem ,20vw,1.4rem);
+  font-family: "aileron-regular";
+  font-size: clamp(.3rem ,20vw,1.2rem);
   line-height: 1.3;
   color: var(--color-text);
-  padding: 2em 0em 0em 0em;
+}
+.endodoncia .endodoncia__p:not(:last-child) {
+  margin-bottom: 0.5em;
 }
 @media screen and (max-width: 550px) {
   .endodoncia .endodoncia__p {
@@ -1620,6 +1691,11 @@ body {
 
 .descripcionendo__cont {
   width: 80%;
+}
+@media screen and (max-width: 1024px) {
+  .descripcionendo__cont {
+    width: 90%;
+  }
 }
 
 .descripcionendo__h3 {
@@ -1660,8 +1736,8 @@ body {
 }
 
 .descripcionendo__p {
-  font-family: "aileron-thin";
-  font-size: clamp(.3rem ,20vw,1.4rem);
+  font-family: "aileron-regular";
+  font-size: clamp(.3rem ,20vw,1.2rem);
   line-height: 1.3;
   color: var(--color-text);
 }
@@ -1995,7 +2071,6 @@ body {
 }
 
 .contacto__title {
-  width: 100%;
   text-align: center;
   font-family: "montserrat";
   font-weight: 900;
@@ -2013,7 +2088,7 @@ body {
 
 .contacto__titleline {
   width: 10%;
-  position: relative;
+  position: absolute;
 }
 .contacto__titleline::before {
   content: "";
@@ -2022,7 +2097,7 @@ body {
   height: 2px;
   background: var(--color-secundario-vague);
   position: absolute;
-  top: 1em;
+  top: 2em;
   right: 0px;
 }
 
@@ -2088,19 +2163,20 @@ body {
 }
 
 .contacto__horariosp {
-  font-family: "aileron-thin";
+  font-family: "aileron-regular";
   font-size: clamp(.3rem ,20vw,1.1rem);
   color: var(--color-text);
+  line-height: 1.4;
 }
 
 .contacto__horariosother {
-  font-family: "aileron-thin";
+  font-family: "aileron-regular";
   color: var(--color-text);
   margin-top: 1em;
 }
 
 .contacto__horariosother p {
-  font-family: "aileron-thin";
+  font-family: "aileron-regular";
 }
 
 .contacto__coloblack {
@@ -2229,11 +2305,12 @@ body {
 
 .iframe__infop {
   width: 80%;
-  font-family: "aileron-thin";
-  font-size: clamp(.3rem ,20vw,1.1rem);
+  font-family: "aileron-regular";
+  font-size: clamp(.3rem ,20vw,1.2rem);
   color: var(--color-text);
   margin-bottom: 2.5em;
   text-align: start;
+  line-height: 1.4;
 }
 @media screen and (max-width: 768px) {
   .iframe__infop {
@@ -2242,8 +2319,8 @@ body {
 }
 
 .iframe__infocont {
-  font-size: clamp(.3rem ,20vw,1.1rem);
-  font-family: "aileron-thin";
+  font-size: clamp(.3rem ,20vw,1.2rem);
+  font-family: "aileron-regular";
 }
 .iframe__infocont:not(:last-child) {
   margin-bottom: 2em;
@@ -2280,8 +2357,11 @@ body {
 }
 
 .iframe__infotel {
-  font-family: "aileron-thin";
+  font-family: "aileron-regular";
   color: var(--color-secundario-vague);
+}
+.iframe__infotel:not(:first-child) {
+  margin-top: 0.5em;
 }
 
 .iframe__infotela {
@@ -2317,15 +2397,16 @@ body {
 }
 
 .formulario__titlep {
-  font-family: "aileron-thin";
+  font-family: "aileron-regular";
   margin-bottom: 1em;
   color: var(--color-text);
   font-size: clamp(.3rem ,20vw,1.1rem);
+  line-height: 1.4;
 }
 
 .formulario__titlespan {
   color: var(--color-text);
-  font-family: "aileron-thin";
+  font-family: "aileron-regular";
   font-size: clamp(.3rem ,20vw,1.1rem);
 }
 
@@ -2342,8 +2423,8 @@ body {
   padding: 1.5em 0em 1.5em 1.5em;
   font-family: "montserrat";
   border-radius: 8px;
-  -webkit-box-shadow: 0 0 0 1.5px var(--color-secundario-vague);
-          box-shadow: 0 0 0 1.5px var(--color-secundario-vague);
+  -webkit-box-shadow: 0 0 0 2px var(--color-secundario-vague);
+          box-shadow: 0 0 0 2px var(--color-secundario-vague);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   background: white;
@@ -2487,7 +2568,7 @@ body {
 
 .checkbox__politicap {
   color: var(--color-text);
-  font-family: "aileron-thin";
+  font-family: "aileron-regular";
 }
 @media screen and (max-width: 480px) {
   .checkbox__politicap {
@@ -2530,18 +2611,18 @@ body {
 }
 
 .submit {
-  background: var(--color-secundario-vague);
+  background: var(--color-secundario-brown);
   padding: 1.5em 4em 1.5em 4em;
   cursor: pointer;
-  color: white;
+  color: var(--color-secundario-vague);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-weight: 900;
   border-radius: 8px;
 }
 .submit:hover {
-  color: var(--color-secundario-vague);
-  background: var(--color-secundario-brown);
+  color: var(--color-secundario-brown);
+  background: var(--color-secundario-vague);
 }
 
 .iframe__cont {
@@ -2822,7 +2903,7 @@ body {
 .cookies__title .cookies__p {
   color: var(--color-text);
   font-size: clamp(.3rem ,20vw, .9rem);
-  font-family: "aileron-thin";
+  font-family: "aileron-regular";
 }
 @media screen and (max-width: 1250px) {
   .cookies__title .cookies__p {
