@@ -23,13 +23,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primario: #131313;
-    --color-secundario: #eae9e8;
+    --color-secundario: white;
   }
 }
 @media (prefers-contrast: high) {
   :root {
     --color-primario: #131313;
-    --color-secundario: #eae9e8;
+    --color-secundario: white;
   }
 }
 * {
@@ -1800,12 +1800,9 @@ body {
   max-width: 800px;
 }
 
-.tabs {
+.tecnologia {
   width: 100%;
-  background-image: url(../assets/tabs.webp);
-  background-size: 100% auto;
-  background-position: top;
-  padding: 8em 0em 8em 0em;
+  background-color: greenyellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1819,13 +1816,139 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 8em 0em 8em 0em;
+}
+
+.tecnologia__cont {
+  width: 90%;
+}
+
+.tecnologia__title {
+  text-align: center;
+  font-family: "montserrat";
+  font-weight: 900;
+  font-size: clamp(.3rem ,20vw,1.8rem);
+  line-height: 1.3;
+  letter-spacing: 3px;
+  color: var(--color-secundario-brown);
+}
+
+.tecnologia__contenidowidth {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tecnologia__size {
+  width: 80%;
+  background: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: self-start;
+      -ms-flex-align: self-start;
+          align-items: self-start;
+  margin-top: 2em;
+}
+@media screen and (max-width: 1024px) {
+  .tecnologia__size {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+
+.tecnologia__img {
+  width: 50%;
+  margin-right: 2em;
+}
+@media screen and (max-width: 1024px) {
+  .tecnologia__img {
+    width: 100%;
+    margin-right: 0em;
+    margin-bottom: 2em;
+  }
+}
+
+.tecnologia__contp {
+  width: 90%;
+  background: red;
+}
+@media screen and (max-width: 1024px) {
+  .tecnologia__contp {
+    width: 100%;
+  }
+}
+
+.tecnologia__p {
+  font-family: "aileron-regular";
+  font-size: clamp(.3rem ,20vw,1.2rem);
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.tabs {
+  width: 100%;
+  min-height: 50vh;
   position: relative;
-  margin-bottom: 15em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tabs::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 50vh;
+  background-image: url(../assets/tabs.webp);
+  background-size: cover;
+  background-position: top;
+  z-index: -1;
+  -webkit-filter: blur(0.25em);
+          filter: blur(0.25em);
 }
 @media screen and (max-width: 768px) {
-  .tabs {
-    background-image: none;
-    padding: 0em 0em 8em 0em;
+  .tabs::before {
+    display: none;
   }
 }
 .tabs::after {
@@ -1836,7 +1959,7 @@ body {
   height: 100%;
   background: var(--color-secundario-brown);
   opacity: 0.6;
-  z-index: 0;
+  z-index: -1;
 }
 @media screen and (max-width: 768px) {
   .tabs::after {
@@ -1847,11 +1970,28 @@ body {
 .tabs__cont {
   width: 90%;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 768px) {
   .tabs__cont {
     display: none;
   }
+}
+
+.tabs__width {
+  width: 80%;
 }
 
 .tabs__ul {

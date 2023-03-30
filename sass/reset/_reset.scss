@@ -29,14 +29,14 @@
 @media (prefers-color-scheme: dark) {
     :root{
     --color-primario   : #131313;
-    --color-secundario : #eae9e8;  
+    --color-secundario : white;  
     }
 }
 
 @media (prefers-contrast: high){
     :root{
     --color-primario   : #131313;
-    --color-secundario : #eae9e8; 
+    --color-secundario : white; 
 
 }
 }
