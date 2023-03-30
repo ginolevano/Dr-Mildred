@@ -26,6 +26,9 @@
     }
     .header__logo{
         width: 20%;
+        @include mixin.laptop(1024px){
+            width: 24%;
+        }
         @include mixin.mobile(1080px){width:40%}
 
         @include mixin.mobile(550px){width:65%}
@@ -40,14 +43,14 @@
     
     .desktop__logo{
         display: block;
-        @include mixin.mobile(550px){display: none;}
+        @include mixin.smallTablet{display: none;}
     }
     .mobile__logo{
         display: none;
-        @include mixin.mobile(550px){display: block;width: 60%}
+        @include mixin.smallTablet{display: block;width: 60%}
     }
 
-
+//768px
 
     .header__menu{
         @include mixin.flex(row,nowrap,center,center);
@@ -1119,7 +1122,7 @@
     }
     .endodoncia__conteiner{
         width: 90%;
-        margin-top: 4em;
+        margin-top: 5em;
         @include mixin.flex(row,nowrap,center,self-start);
         @include mixin.laptop(1024px){
             width: 100%;
@@ -1189,7 +1192,7 @@
 .descripcionendo__textcont{
     width: 100%;
     @include mixin.flex(column,nowrap,center,center);
-    padding: 2em 0em 0em 0em;
+    margin-top: 3em;
 }
 .descripcionendo__text{
     width: 90%;
@@ -1241,7 +1244,7 @@
 
 .tecnologia{
     width: 100%;
-    background-color: greenyellow;
+    //background-color: greenyellow;
     @include mixin.flex(row,nowrap,center,center);
     padding: 8em 0em 8em 0em;
 }
@@ -1258,7 +1261,7 @@
     color: var(--color-secundario-brown);
 }
 .tecnologia__contenido{
-
+    margin-top: 3em;
 }
 .tecnologia__contenidowidth{
     width: 100%;
@@ -1268,9 +1271,9 @@
 
 .tecnologia__size{
     width: 80%;
-    background: blue;
+    //background: blue;
     @include mixin.flex(row,nowrap,center,self-start);
-    margin-top: 2em;
+    
     @include mixin.laptop(1024px){
         @include mixin.flex(column,nowrap,center,center);
         width: 100%;
@@ -1288,7 +1291,7 @@
 }   
 .tecnologia__contp{
     width: 90%;
-    background: red;
+    //background: red;
     @include mixin.laptop(1024px){
         width: 100%;
     }
@@ -1298,44 +1301,108 @@
     font-size: clamp(.3rem ,20vw,1.2rem);
     line-height: 1.3;
     color: var(--color-text);
+    &:not(:last-child){
+        margin-bottom: .5em;
+    }
 }
+
+
+
+.banner{
+    width: 100%;
+    //min-height: 50vh;
+    background: var(--color-secundario-vague);
+    @include mixin.flex(row,nowrap,center,center)
+
+}
+.banner__cont{
+    widows: 100%;
+}
+.banner__width{
+    @include mixin.flex(row,nowrap,center,center);
+    @include mixin.smalllaptop{
+        @include mixin.flex(column,nowrap,center,center)
+
+    }
+
+}
+.banner__info{
+    width: 50%;
+    @include mixin.flex(row,nowrap,center,center);
+        @include mixin.smalllaptop{
+        width:100%;
+    }
+}
+
+.banner__infowidth{
+    width: 80%;
+}
+.banner__margin{
+    &:not(:last-child){
+        margin-bottom: .5em;
+    }
+}
+.banner__h2{
+    font-family: "montserrat";
+    font-weight: 900;
+    font-size: clamp(.3rem ,20vw,1.8rem);
+    line-height: 1.3;
+    letter-spacing: 3px;
+    color: var(--color-secundario-brown);
+}
+.banner__h3{
+    font-family: "montserrat";
+    font-weight: 900;
+    font-size: clamp(.3rem ,20vw,1.8rem);
+    line-height: 1.3;
+    letter-spacing: 3px;
+    color: var(--color-secundario-brown);
+
+}
+.banner__p{
+    font-family: "aileron-regular";
+    font-size: clamp(.3rem ,20vw,1.2rem);
+    line-height: 1.3;
+    color: var(--color-text);
+    margin-top: 1.5em;
+    color: var(--color-secundario-brown);
+}
+.banner__btn{
+    width: fit-content;
+    background-color: var(--color-secundario-brown);
+    border-radius: 8px;
+    padding: 1.5em 4em 1.5em 4em;
+    margin-top: 2em;
+    cursor: pointer;
+    color: var(--color-secundario-vague);
+}
+.banner__img{
+
+    width: 100%;
+    min-height: 70vh;
+    background-image: url(/assets/banner.jpg);
+    background-size:  cover;
+    background-repeat: no-repeat;
+
+    @include mixin.smalllaptop{
+        background-size: 100% auto;
+    }
+}
+
+
+
+
 
 
 
 
 .tabs{
     width: 100%;
-    min-height: 50vh;
     position: relative;
     @include mixin.flex(row,nowrap,center,center);
+    //background: var(--color-secundario-white);
+    margin-bottom: 20em;
     
-    &::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    min-height: 50vh;
-    background-image: url(../assets/tabs.webp);
-    background-size: cover;
-    background-position:  top;
-    z-index: -1;
-    filter: blur(.25em);
-    @include mixin.smallTablet(768px){display: none;}
-
-    }
-    &::after{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--color-secundario-brown);
-    opacity: 0.6;
-    z-index: -1;
-    @include mixin.smallTablet(768px){
-        background: transparent;
-
-    }
-    }
 }
 .tabs__cont{
     width: 90%;
@@ -1345,6 +1412,9 @@
 }
 .tabs__width{
     width: 80%;
+    @include mixin.laptop(1024px){
+        width: 100%;
+    }
 }
 .tabs__ul{
     @include mixin.flex(row,nowrap,flex-start,center)
@@ -1356,7 +1426,7 @@
     cursor: pointer;
     font-family: 'montserrat';
     font-weight: 900;
-    color: var(--color-secundario-white);
+    color: var(--color-text);
     transform: all .4s ease-in-out;
     &.active{
         color: var(--color-secundario-vague);
@@ -1381,7 +1451,7 @@
 .tabs__infocont{
     width: 100%;
     @include mixin.flex(row,nowrap,center,self-start);
-    padding: 2em 0em 3em 0em;
+    padding: 2em 0em 0em 2em;
     opacity: 0;
     transition: all .3s ease;
     &.active{
@@ -1389,10 +1459,10 @@
     }
 }
 .tabs__infop{
-    width: 80%;
+    width: 100%;
     font-family: 'montserrat';
     line-height: 1.4;
-    color: var(--color-secundario-white);
+    color: var(--color-text);
 }
 
 
@@ -1401,24 +1471,34 @@
     z-index: 1;
     @include mixin.smallTablet(768px){
         display: block;
-        width: 100%;
-        background-image: url(../assets/card_3.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 4em 0em 4em 0em;
+        width: 90%;
+
         position: relative;
 
         &::before{
             content: "";
-            display: block;
-            position: absolute;
-            top: 0;
             width: 100%;
-            height: 100%;
-            background: var(--color-secundario-brown);
-            opacity: 0.6;
-
+            min-height: 100%;
+            position: absolute;
+            background-image: url(../assets/card_3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 4em 0em 4em 0em;
+            position: relative;
+            filter: blur(.25em);
         }
+
+        // &::after{
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     top: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     background: var(--color-secundario-brown);
+        //     opacity: 0.6;
+
+        // }
     }
 }
 .tabstwo__width{
