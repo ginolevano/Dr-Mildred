@@ -547,6 +547,9 @@
                 font-size: clamp(.3rem ,20vw,1.8rem);
                 line-height: 1.3;
                 letter-spacing: 3px;
+                @include mixin.laptop(1500px){
+                    letter-spacing: 0px;
+                }
                 @include mixin.mobile{font-size: clamp(.3rem ,20vw,1.4rem);}
                 color: var(--color-secundario-brown);
 
@@ -733,7 +736,9 @@
             padding: 0em 0em 1em 0em;
             text-transform: uppercase;
             letter-spacing: 2px;
-
+            @include mixin.laptop(1500px){
+                letter-spacing: 0px;
+            }
         }
 
         .card__p{
@@ -797,6 +802,9 @@
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 2px;
+    @include mixin.laptop(1500px){
+        letter-spacing: 0px;
+    }
     @include mixin.smallTablet{
         margin-bottom: 3em;
     }
@@ -1101,6 +1109,9 @@
         line-height: 1.3;
         letter-spacing: 3px;
         color: var(--color-secundario-brown);
+        @include mixin.laptop(1500px){
+            letter-spacing: 0px;
+        }
         @include mixin.mobile{font-size: clamp(.3rem ,20vw,1.4rem);}
 
     }
@@ -1114,6 +1125,7 @@
         display: block;
         width: 100%;
         height: 2px;
+
         background: var(--color-secundario-vague);
         position: absolute;
         top: 1em;
@@ -1124,7 +1136,10 @@
         width: 90%;
         margin-top: 5em;
         @include mixin.flex(row,nowrap,center,self-start);
-        @include mixin.laptop(1024px){
+        @include mixin.laptop(1500px){
+            width: 100%;
+        }
+        @include mixin.smalllaptop{
             width: 100%;
             @include mixin.flex(column,nowrap,center,center);
 
@@ -1187,6 +1202,9 @@
     line-height: 1.3;
     letter-spacing: 3px;
     color: var(--color-secundario-brown);
+    @include mixin.laptop(1500px){
+        letter-spacing: 0px;
+    }
 }
 
 .descripcionendo__textcont{
@@ -1196,6 +1214,9 @@
 }
 .descripcionendo__text{
     width: 90%;
+    @include mixin.laptop(1500px){
+        width: 100%;
+    }
 
     @include mixin.smalllaptop{
         width: 100%;
@@ -1215,12 +1236,18 @@
         font-size: clamp(.3rem ,20vw,1.2rem);
     }
 
-
+    .descripcionendo__span{
+        font-weight: 900;
+    }
 }
 .descripcionendo__textimg{
     width: 90%;
     @include mixin.flex(row,nowrap,space-between,self-start);
     margin-top: 1em;
+
+    @include mixin.laptop(1500px){
+        width: 100%;
+    }
 
     @include mixin.smalllaptop{
         width: 100%;
@@ -1249,7 +1276,7 @@
     padding: 8em 0em 8em 0em;
 }
 .tecnologia__cont{
-    width: 90%;
+    
 }
 .tecnologia__title{
     text-align: center;
@@ -1259,14 +1286,21 @@
     line-height: 1.3;
     letter-spacing: 3px;
     color: var(--color-secundario-brown);
+    @include mixin.laptop(1500px){
+        letter-spacing: 0px;
+    }
 }
 .tecnologia__contenido{
+    width: 100%;
     margin-top: 3em;
+    @include mixin.flex(row,nowrap,center,center)
 }
 .tecnologia__contenidowidth{
-    width: 100%;
+    width: 90%;
     @include mixin.flex(row,nowrap,center,center);
-    
+    @include mixin.laptop(1500px){
+        width: 100%;
+    }
 }
 
 .tecnologia__size{
@@ -1274,9 +1308,9 @@
     //background: blue;
     @include mixin.flex(row,nowrap,center,self-start);
     
-    @include mixin.laptop(1024px){
+    @include mixin.smalllaptop{
+        width: 90%;
         @include mixin.flex(column,nowrap,center,center);
-        width: 100%;
     }
 }
 .tecnologia__img{
@@ -1290,11 +1324,11 @@
     }
 }   
 .tecnologia__contp{
-    width: 90%;
-    //background: red;
-    @include mixin.laptop(1024px){
-        width: 100%;
-    }
+    // width: 90%;
+    // //background: red;
+    // @include mixin.laptop(1024px){
+    //     width: 100%;
+    // }
 }
 .tecnologia__p{
     font-family: "aileron-regular";
@@ -1304,13 +1338,16 @@
     &:not(:last-child){
         margin-bottom: .5em;
     }
+
+    .tecnologia__span{
+        font-weight: 900;
+    }
 }
 
 
 
 .banner{
     width: 100%;
-    //min-height: 50vh;
     background: var(--color-secundario-vague);
     @include mixin.flex(row,nowrap,center,center)
 
@@ -1321,6 +1358,7 @@
 .banner__width{
     @include mixin.flex(row,nowrap,center,center);
     @include mixin.smalllaptop{
+        padding: 6em 0em 0em 0em;
         @include mixin.flex(column,nowrap,center,center)
 
     }
@@ -1328,7 +1366,12 @@
 }
 .banner__info{
     width: 50%;
+    min-height: 67vh;
     @include mixin.flex(row,nowrap,center,center);
+
+        @include mixin.smalllaptop{
+            min-height: 0;
+        }
         @include mixin.smalllaptop{
         width:100%;
     }
@@ -1336,6 +1379,11 @@
 
 .banner__infowidth{
     width: 80%;
+
+    @include mixin.smalllaptop{
+        width: 90%;
+    }
+
 }
 .banner__margin{
     &:not(:last-child){
@@ -1349,15 +1397,21 @@
     line-height: 1.3;
     letter-spacing: 3px;
     color: var(--color-secundario-brown);
+
+    @include mixin.laptop(1500px){
+        letter-spacing: 0px;
+    }
 }
 .banner__h3{
     font-family: "montserrat";
     font-weight: 900;
-    font-size: clamp(.3rem ,20vw,1.8rem);
+    font-size: clamp(.3rem ,20vw,2.2rem);
     line-height: 1.3;
     letter-spacing: 3px;
     color: var(--color-secundario-brown);
-
+    @include mixin.laptop(1500px){
+        letter-spacing: 0px;
+    }
 }
 .banner__p{
     font-family: "aileron-regular";
@@ -1376,31 +1430,310 @@
     cursor: pointer;
     color: var(--color-secundario-vague);
 }
-.banner__img{
-
+.banner__size{
     width: 100%;
-    min-height: 70vh;
-    background-image: url(/assets/banner.jpg);
-    background-size:  cover;
-    background-repeat: no-repeat;
+    height: 70vh;
+
+}
+.banner__img{
+    width: 100%;
+    min-height: 67vh;
 
     @include mixin.smalllaptop{
-        background-size: 100% auto;
+        min-height: 0;
+        margin-top: 6em;
+
+    }
+    
+}
+
+.precio{
+    width: 100%;
+    @include mixin.flex(row,nowrap,center,center);
+    padding: 8em 0em 8em 0em;
+}
+.precio__cont{
+    width: 80%;
+    @include mixin.flex(row,nowrap,center,center);
+    @include mixin.laptop(1500px){
+        width: 90%;
+    }
+}
+.precio__width{
+    width: 90%;
+    @include mixin.smalllaptop{
+        width: 100%;
+    }
+}
+.precio__h4{
+    text-align: center;
+    font-family: "montserrat";
+    font-weight: 900;
+    font-size: clamp(.3rem ,20vw,1.8rem);
+    line-height: 1.3;
+    letter-spacing: 3px;
+    color: var(--color-secundario-brown);
+    @include mixin.laptop(1500px){
+        letter-spacing: 0px;
+    }
+}
+.precio__text{
+    margin-top: 3em;
+}
+.precio__p{
+    font-family: "aileron-regular";
+    font-size: clamp(.3rem ,20vw,1.2rem);
+    line-height: 1.3;
+    color: var(--color-text);
+
+    &:not(:last-child) {
+        margin-bottom: 0.5em;
+    }
+
+}
+
+
+.formulario__endo{
+    width: 100%;
+    @include mixin.flex(row,nowrap,center,center);
+    padding: 8em 0em 8em 0em;
+    position: relative;
+    
+    &::before{
+        content: "22";
+        position: absolute;
+        background-image: url(../assets/dentista.jpg);
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(0.2em);
+
+    }
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--color-secundario-brown);
+        opacity: .3;
+    }
+
+}
+.formulario__endocont{
+    width: 80%;
+    @include mixin.flex(row,nowrap,center,center);
+
+    @include mixin.smalllaptop{
+        width: 90%;
+    }
+
+}
+.formulario__endoall{
+    width: 90%;
+    @include mixin.flex(row,nowrap,center,self-start);
+    @include mixin.laptop(1500px){
+        width:100%;
+    }
+    @include mixin.smalllaptop{
+        @include mixin.flex(column,nowrap,center,center);
+
+    }
+}
+
+.formulario__info{
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    @include mixin.smalllaptop{
+        width: 100%;
+    }
+
+    &:not(:last-child){
+        margin-right: 1em;
+    }
+    @include mixin.smalllaptop{
+        &:not(:first-child){
+            margin-top: 2em;
+        }
+        &:not(:last-child){
+            margin-right: 0em;
+        }    
+    
+    }
+}
+
+.formulario__h5{   
+    font-weight: 900;
+    margin-bottom: 1.1em;
+    font-size: clamp(.3rem ,20vw,3rem);
+    letter-spacing: 2px;
+    color: var(--color-secundario-vague);
+    position: relative;
+    
+    @include mixin.smalllaptop{
+    font-size: clamp(.3rem ,20vw,1.8rem)}
+}
+.formulario__p{
+    font-family: "aileron-regular";
+    font-size: clamp(.3rem ,20vw,1.2rem);
+    color: white;
+    text-align: start;
+    line-height: 1.4;
+    &:not(:last-child){
+        margin-bottom: .5em;
+
+    }
+}
+.formulario__ul{
+    margin-top: 2em;
+    @include mixin.flex(row,nowrap,flex-start,center)
+}
+.formulario__li{
+    width: 1.5em;
+
+    &:not(:last-child){
+        margin-right: 1em;
+    }
+}
+.formulario__img{
+    width: 100%;
+}
+
+.formulario__label{
+    &:not(:last-child){
+        margin-bottom: 1em;
+
+    }
+}
+.formulario__input{
+    width: 100%;
+    padding: 1.5em 0em 1.5em 1.5em;
+    font-family: 'montserrat';
+    border-radius: 8px;
+    box-shadow:0 0 0 2px var(--color-secundario-vague);
+    transition: all 1s ease;
+    background: white;
+
+    &:focus{
+        outline: 0px solid var(--color-secundario-vague);
+        color: var(--color-secundario-brown);
+        
+    }
+    &::placeholder{
+        opacity: .4;
+    }
+    &:focus::placeholder{
+        opacity: .2;
+        transition: all .1s ease-in-out;
+
+    }
+}
+.formulario__textarea{
+    width: 100%;
+    border: 0px solid var(--color-secundario-brown);
+    resize: vertical;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 0 2px var(--color-secundario-vague);
+    box-shadow: 0 0 0 2px var(--color-secundario-vague);
+    padding: 1.5em 0em 1.5em 1.5em;
+    font-family: "montserrat";
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    background: white;
+
+    &:focus{
+        outline: none;
+        color: var(--color-secundario-brown)
+        
+    }
+    
+    &::placeholder{
+        opacity: .4;
+    }
+    &:focus::placeholder {
+        opacity: .2;
+
+    }
+}
+
+.formulario__checkbox{
+    margin-top: 4em;
+
+}
+.formulario__checkboxcont{
+    @include mixin.flex(row,nowrap,center,center)
+
+}
+.checkbox__endo{
+
+}
+.checkbox__endoinput{
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    outline: 0px solid var(--color-text);
+    margin-right: 0.5em;
+    position: relative;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 0 2px var(--color-secundario-vague);
+    box-shadow: 0 0 0 2px var(--color-secundario-vague);
+    
+    &:checked::after{
+        content: "";
+        position: absolute;
+        top: 1.4px;
+        left: 2px;
+        width: 70%;
+        height: 100vh;
+        
+        background-image: url(../assets/check_vague.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: .2em;
+        
+
+    }
+}
+
+.checkbox__pendo{
+    color: white;
+    font-family: "aileron-regular";
+}
+
+.checkbox__aendo{
+    font-weight: 900;
+}
+
+.formulario__submitbtn{
+    width: 100%;
+    @include mixin.flex(row,nowrap,center,center);
+    margin-top: 3em;
+}
+.formulario__submit{
+    background: var(--color-secundario-brown);
+    padding: 1.5em 4em 1.5em 4em;
+    cursor: pointer;
+    color: var(--color-secundario-vague);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-weight: 900;
+    border-radius: 8px;
+
+    &:hover{
+        color: var(--color-secundario-vague);
+        background: var(--color-secundario-brown);
+
     }
 }
 
 
-
-
-
-
-
-
 .tabs{
     width: 100%;
-    position: relative;
     @include mixin.flex(row,nowrap,center,center);
-    //background: var(--color-secundario-white);
+    background: var(--color-secundario-white);
+    padding: 6em 0em 6em 0em;
     margin-bottom: 20em;
     
 }
@@ -1408,7 +1741,12 @@
     width: 90%;
     z-index: 1;
     @include mixin.flex(row,nowrap,center,center);
-    @include mixin.smallTablet(768px){display: none;}
+    
+    @include mixin.laptop(1500px){
+        width: 100%;
+    }
+    @include mixin.smalllaptop{display: none;}
+
 }
 .tabs__width{
     width: 80%;
@@ -1469,10 +1807,9 @@
 .tabstwo__cont{
     display: none;
     z-index: 1;
-    @include mixin.smallTablet(768px){
+    @include mixin.smalllaptop{
         display: block;
         width: 90%;
-
         position: relative;
 
         &::before{
@@ -1488,17 +1825,6 @@
             filter: blur(.25em);
         }
 
-        // &::after{
-        //     content: "";
-        //     display: block;
-        //     position: absolute;
-        //     top: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background: var(--color-secundario-brown);
-        //     opacity: 0.6;
-
-        // }
     }
 }
 .tabstwo__width{
@@ -1520,6 +1846,10 @@
     font-weight: 900;
     color: var(--color-secundario-vague);
 
+    @include mixin.smalllaptop{
+        padding: 1em 0.4em 1em 0em;
+
+    }
 }
 
 .tabstwo__title{
@@ -1592,6 +1922,10 @@
     letter-spacing: 3px; 
     color: var(--color-secundario-brown);
 
+    @include mixin.laptop(1500px){
+        letter-spacing: 0px;
+    }
+
     @include mixin.mobile{
         width: 90%;
         font-size: clamp(.3rem ,20vw,1.5rem);
@@ -1643,6 +1977,9 @@
     margin-bottom: .8em;
     letter-spacing: 2px;
 
+    @include mixin.laptop(1500px){
+        letter-spacing: 0px;
+    }
 }
 .contacto__horariosp{
     font-family: 'aileron-regular';
@@ -1725,7 +2062,9 @@
     font-size: clamp(.3rem ,20vw,1.8rem);
     letter-spacing: 2px;
     color: var(--color-secundario-brown);
-
+    @include mixin.laptop(1500px){
+        letter-spacing: 0px;
+    }
     @include mixin.smallTablet{
         font-size: clamp(.3rem ,20vw,1.4rem);
     }
@@ -1824,7 +2163,6 @@
     }
 }
 .form__input{
-    // outline: 0px solid var(--color-secundario-vague);
     width: 100%;
     padding: 1.5em 0em 1.5em 1.5em;
     font-family: 'montserrat';
@@ -2114,7 +2452,7 @@
     bottom: 0px;
     border-top: 2px solid var(--color-secundario-vague);
     @include mixin.flex(row,nowrap,center,center);
-    transform: translateY(20rem);
+    transform: translateY(25rem);
     opacity: 0;
     transition: all 1.5s ease;
 
