@@ -277,8 +277,8 @@
         left: 0px;
         width: 100%;
         height: 100%;
-        background-color: var(--color-secundario-brown);
-        opacity: .6;
+        background-color: var(--color-secundario-black);
+        opacity: .8;
         z-index: 0;
     }
 }
@@ -327,10 +327,7 @@
         font-size: clamp(.3rem ,20vw,1.1rem)
     }
 
-    .slider__copycolors{
-        font-weight: 900;
-        color: var(--color-secundario-vague);
-    }
+    
 }
 .slider__copytitle{
     font-family: 'openSans';
@@ -390,7 +387,6 @@
     }
 }
 .slider__copyweight{
-    font-weight: 900;
     margin-top: 1em;
     color: var(--color-secundario-vague);
 
@@ -424,7 +420,6 @@
     }
     
     .slider__copycolors{
-        font-weight: 900;
         color: var(--color-secundario-vague);
     }
 }
@@ -525,7 +520,6 @@
 .main{
     width: 100%;
     background-color: var(--color-secundario);
-    // @include mixin.mobile(550px){padding:10em 0em 20em 0em;}
 
     .main__cont{
         width: 100%;
@@ -551,7 +545,7 @@
                     letter-spacing: 0px;
                 }
                 @include mixin.mobile{font-size: clamp(.3rem ,20vw,1.4rem);}
-                color: var(--color-secundario-brown);
+                color: var(--color-titles);
 
             }
 
@@ -577,13 +571,14 @@
                 text-align: center;
                 font-family: 'aileron-regular';
                 font-size: clamp(.3rem ,20vw,1.2rem);
-                line-height: 1.4;
+                line-height: 1.5;
                 color: var(--color-text);
                 margin-top: 2.5em;
                 @include mixin.mobile(768px){
                     width: 100%;
-                    font-size: clamp(.3rem ,20vw,1.2rem);
+                    font-size: clamp(.3rem ,20vw,1rem);
                     padding: 2em 0em 0em 0em;}
+                    line-height: 1.4;
 
 
                 .main__pspan{
@@ -736,6 +731,7 @@
             padding: 0em 0em 1em 0em;
             text-transform: uppercase;
             letter-spacing: 2px;
+            color: var(--color-titles);
             @include mixin.laptop(1500px){
                 letter-spacing: 0px;
             }
@@ -789,7 +785,7 @@
     font-size: clamp(.3rem ,20vw,1.8rem);
     line-height: 1.3;
     margin-bottom: 1em;
-    color: var(--color-secundario-brown);
+    color: var(--color-titles);
     @include mixin.smallTablet{
         font-size: clamp(.3rem ,20vw,1.4rem);
     }
@@ -903,10 +899,14 @@
 }
 .info__textp{                
     font-size: clamp(.3rem ,20vw,1.1rem);
+    line-height: 1.4;
     &:not(:first-child){
         margin-top: 1em;
     }
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
 
+    }
     
 }
 .info__textpspan{
@@ -1003,7 +1003,7 @@
 .email__p{
     font-size: clamp(1rem ,20vw,1.3rem);
     margin-bottom: 2em;
-    color: var(--color-secundario-white);
+    color: white;
     font-weight: 900;
     @include mixin.smallTablet{
         font-size: clamp(.3rem ,20vw,.9rem);
@@ -1108,7 +1108,7 @@
         font-size: clamp(.3rem ,20vw,1.8rem);
         line-height: 1.3;
         letter-spacing: 3px;
-        color: var(--color-secundario-brown);
+        color: var(--color-titles);
         @include mixin.laptop(1500px){
             letter-spacing: 0px;
         }
@@ -1157,22 +1157,24 @@
         @include mixin.mobile(1024px){
             &:not(:last-child){
                 margin-right: 0em;
-                 margin-bottom: 2em;
+                margin-bottom: 2em;
             }
         }
     }
     .endodoncia__p{
         font-family: "aileron-regular";
         font-size: clamp(.3rem ,20vw,1.2rem);
-        line-height: 1.3;
+        line-height: 1.5;
         color: var(--color-text);
-        //padding: 2em 0em 0em 0em;
         &:not(:last-child){
             margin-bottom: .5em;
         }
-        @include mixin.mobile(550px){width:100%;}
-        @include mixin.smallTablet(768px){width: 100%;
-        font-size: clamp(.3rem ,20vw,1.2rem);}
+        
+        @include mixin.mobile{
+            width:100%;
+            font-size: clamp(.3rem ,20vw,1rem);
+
+        }
     }
     
     
@@ -1201,7 +1203,7 @@
     font-size: clamp(.3rem ,20vw,1.8rem);
     line-height: 1.3;
     letter-spacing: 3px;
-    color: var(--color-secundario-brown);
+    color: var(--color-titles);
     @include mixin.laptop(1500px){
         letter-spacing: 0px;
     }
@@ -1225,17 +1227,18 @@
 .descripcionendo__p{
     font-family: "aileron-regular";
     font-size: clamp(.3rem ,20vw,1.2rem);
-    line-height: 1.3;
+    line-height: 1.5;
     color: var(--color-text);
     
     &:not(:last-child){
         margin-bottom: .5em;
     }
 
-    @include mixin.smalllaptop{
-        font-size: clamp(.3rem ,20vw,1.2rem);
-    }
+    
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
 
+    }
     .descripcionendo__span{
         font-weight: 900;
     }
@@ -1285,7 +1288,7 @@
     font-size: clamp(.3rem ,20vw,1.8rem);
     line-height: 1.3;
     letter-spacing: 3px;
-    color: var(--color-secundario-brown);
+    color: var(--color-titles);
     @include mixin.laptop(1500px){
         letter-spacing: 0px;
     }
@@ -1324,21 +1327,20 @@
     }
 }   
 .tecnologia__contp{
-    // width: 90%;
-    // //background: red;
-    // @include mixin.laptop(1024px){
-    //     width: 100%;
-    // }
+
 }
 .tecnologia__p{
     font-family: "aileron-regular";
     font-size: clamp(.3rem ,20vw,1.2rem);
-    line-height: 1.3;
+    line-height: 1.5;
     color: var(--color-text);
     &:not(:last-child){
         margin-bottom: .5em;
     }
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
 
+    }
     .tecnologia__span{
         font-weight: 900;
     }
@@ -1419,10 +1421,16 @@
 .banner__p{
     font-family: "aileron-regular";
     font-size: clamp(.3rem ,20vw,1.2rem);
-    line-height: 1.3;
+    line-height: 1.4;
     color: var(--color-text);
     margin-top: 1.5em;
     color: var(--color-secundario-brown);
+
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
+
+    }
+
 }
 .banner__btn{
     width: fit-content;
@@ -1475,7 +1483,7 @@
     font-size: clamp(.3rem ,20vw,1.8rem);
     line-height: 1.3;
     letter-spacing: 3px;
-    color: var(--color-secundario-brown);
+    color: var(--color-titles);
     @include mixin.laptop(1500px){
         letter-spacing: 0px;
     }
@@ -1486,33 +1494,43 @@
 .precio__p{
     font-family: "aileron-regular";
     font-size: clamp(.3rem ,20vw,1.2rem);
-    line-height: 1.3;
+    line-height: 1.5;
     color: var(--color-text);
 
     &:not(:last-child) {
         margin-bottom: 0.5em;
     }
 
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
+
+    }
 }
 
 
 .formulario__endo{
     width: 100%;
     @include mixin.flex(row,nowrap,center,center);
-    padding: 8em 0em 8em 0em;
     position: relative;
-    
+
     &::before{
-        content: "22";
+        content: "";
         position: absolute;
         background-image: url(../assets/dentista.jpg);
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
         background-size: cover;
-        filter: blur(0.25em);
 
     }
+    
+}
+.formulario__endonblur{
+    width: 100%;
+    padding: 8em 0em 8em 0em;
+    @include mixin.flex(row,nowrap,center,center);
+    backdrop-filter: blur(.25em);
+
     &::after{
         content: "";
         display: block;
@@ -1521,9 +1539,7 @@
         height: 100%;
         background: var(--color-secundario-brown);
         opacity: .5;
-
-    }
-
+    } 
 }
 .formulario__endocont{
     width: 80%;
@@ -1532,7 +1548,7 @@
     @include mixin.smalllaptop{
         width: 90%;
     }
-
+    
 }
 .formulario__endoall{
     width: 90%;
@@ -1587,6 +1603,10 @@
     line-height: 1.4;
     &:not(:last-child){
         margin-bottom: .5em;
+
+    }
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
 
     }
 }
@@ -1752,7 +1772,7 @@
 .tabs{
     width: 100%;
     @include mixin.flex(row,nowrap,center,center);
-    background: var(--color-secundario-white);
+    background: var(--color-secundario-brown);
     padding: 6em 0em 6em 0em;
     margin-bottom: 20em;
     
@@ -1784,7 +1804,7 @@
     cursor: pointer;
     font-family: 'montserrat';
     font-weight: 900;
-    color: var(--color-text);
+    color: var(--color-titles);
     transform: all .4s ease-in-out;
     &.active{
         color: var(--color-secundario-vague);
@@ -1819,8 +1839,8 @@
 .tabs__infop{
     width: 100%;
     font-family: 'montserrat';
-    line-height: 1.4;
-    color: var(--color-text);
+    line-height: 1.5;
+    color: var(--color-secundario-vague);
 }
 
 
@@ -1940,7 +1960,7 @@
     font-size: clamp(.3rem ,20vw,1.8rem);
     line-height: 1.3;  
     letter-spacing: 3px; 
-    color: var(--color-secundario-brown);
+    color: var(--color-titles);
 
     @include mixin.laptop(1500px){
         letter-spacing: 0px;
@@ -1993,7 +2013,7 @@
 }
 .contacto__horariotitles{
     font-weight: 900;
-    color: var(--color-secundario-brown);
+    color: var(--color-titles);
     margin-bottom: .8em;
     letter-spacing: 2px;
 
@@ -2005,7 +2025,13 @@
     font-family: 'aileron-regular';
     font-size: clamp(.3rem ,20vw,1.1rem);
     color: var(--color-text);
-    line-height: 1.4;
+    line-height: 1.5;
+
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
+        line-height: 1.3;
+
+    }
 }
 
 .contacto__horariosother{
@@ -2081,7 +2107,7 @@
     margin-bottom: 1.1em;
     font-size: clamp(.3rem ,20vw,1.8rem);
     letter-spacing: 2px;
-    color: var(--color-secundario-brown);
+    color: var(--color-titles);
     @include mixin.laptop(1500px){
         letter-spacing: 0px;
     }
@@ -2096,9 +2122,14 @@
     color: var(--color-text);
     margin-bottom: 2.5em;
     text-align: start;
-    line-height: 1.4;
+    line-height: 1.5;
     @include mixin.smallTablet{
         width: 100%;
+    }
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
+        line-height: 1.3;
+
     }
 }
 .iframe__infocont{
@@ -2111,9 +2142,13 @@
 }
 .iframe__infocontac{
     color: var(--color-secundario-vague);
-    @include mixin.flex(column,nowrap,center,self-start)
+    @include mixin.flex(column,nowrap,center,self-start);
 
-    
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
+        line-height: 1.3;
+
+    }
 }
 .iframe__infocontaca{
     color: var(--color-text);
@@ -2134,6 +2169,12 @@
 
     &:not(:first-child){
         margin-top: .5em;
+    }
+
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
+        line-height: 1.3;
+
     }
 }
 .iframe__infotela{
@@ -2158,7 +2199,7 @@
     line-height: 1.3;
     margin-bottom: 1em;
     font-weight: 900;
-    color: var(--color-secundario-brown);
+    color: var(--color-titles);
     @include mixin.smallTablet{font-size: clamp(.3rem ,20vw,1.4rem);}
 }
 
@@ -2167,12 +2208,23 @@
     margin-bottom: 1em;
     color: var(--color-text);
     font-size: clamp(.3rem ,20vw,1.1rem);
-    line-height: 1.4;
+    line-height: 1.5;
+
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
+        line-height: 1.3;
+
+    }
 }
 .formulario__titlespan{
     color: var(--color-text);
     font-family: 'aileron-regular';
     font-size: clamp(.3rem ,20vw,1.1rem);
+    @include mixin.mobile{
+        font-size: clamp(.3rem ,20vw,1rem);
+        line-height: 1.3;
+
+    }
 }
 .form{
     margin-top: 2em;
@@ -2496,7 +2548,7 @@
     // }
 
     .cookies__p{
-        color: var(--color-text);
+        color: var(--color-secundario-brown);
         font-size: clamp(.3rem ,20vw, .9rem);
         font-family: 'aileron-regular';
 
@@ -2507,8 +2559,10 @@
     }
     .cookies__span{
         color: var(--color-secundario-vague);
+        font-weight: 900;
         border-bottom: 2px solid var(--color-secundario-vague);
         cursor: pointer;
+
     }
 }
 .cookies__allbtns{
