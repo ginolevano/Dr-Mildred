@@ -595,7 +595,7 @@
         @include mixin.name(white);
         display: grid;
         place-items: center;
-        background-image: url(../assets/bg.jpg);
+        background-image: url(../assets/bg.webp);
         background-size: cover;
         background-position: bottom;
         background-repeat: no-repeat;
@@ -647,7 +647,7 @@
         .card__img{
             width: 100%;
             min-height: 18em;
-            background-image: url(../assets/card_1.jpg);
+            background-image: url(../assets/card_1.webp);
             background-size: cover;
             background-position: top left;
             border-radius: 8px 8px 0px 0px;
@@ -670,7 +670,7 @@
         .card__img1{
             width: 100%;
             min-height: 18em;
-            background-image: url(../assets/card_2.jpg);
+            background-image: url(../assets/card_2.webp);
             background-size: cover;
             background-position: top left;
             border-radius: 8px 8px 0px 0px;
@@ -693,7 +693,7 @@
         .card__img2{
             width: 100%;
             min-height: 18em;
-            background-image: url(../assets/card_3.jpg);
+            background-image: url(../assets/card_3.webp);
             background-size: cover;
             background-position: top left;
             border-radius: 8px 8px 0px 0px;
@@ -857,7 +857,6 @@
     border-radius: 8px;
     object-fit: cover;
 
-    
     @include mixin.smallTablet(840px){
             border-radius: 8px 8px 0px 0px;
     
@@ -934,7 +933,7 @@
         max-width : 800px;
         width: 100%;
         min-height: 48vh;
-        background-image: url(../assets/sonrisas.jpg);
+        background-image: url(../assets/sonrisas.webp);
         background-size: cover;
         background-position: right top;
         z-index: -1;
@@ -1516,7 +1515,7 @@
     &::before{
         content: "";
         position: absolute;
-        background-image: url(../assets/dentista.jpg);
+        background-image: url(../assets/dentista.webp);
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
